@@ -506,8 +506,11 @@ a:focus {
 
 .showcase-features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-lg);
+  max-width: 900px;
+  margin: 0 auto;
+  justify-items: center;
 }
 
 .feature-highlight {
@@ -518,6 +521,8 @@ a:focus {
   box-shadow: var(--shadow-card);
   border: 1px solid var(--border-light);
   transition: all var(--transition-normal);
+  width: 100%;
+  max-width: 280px;
 }
 
 .feature-highlight:hover {
@@ -698,10 +703,27 @@ a:focus {
   
   .showcase-features {
     grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
   }
   
   .demo-chat {
     max-width: 100%;
+  }
+}
+
+/* Tablet view - show 2 columns for better space usage */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .showcase-features {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .feature-highlight:nth-child(3) {
+    grid-column: 1 / -1;
+    max-width: 300px;
+    margin: 0 auto;
   }
 }
 
