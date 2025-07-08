@@ -1,0 +1,53 @@
+{
+  "name": "diy-education-coach",
+  "version": "1.0.0",
+  "description": "A student-friendly website for Republic Polytechnic students to plan, prepare, and reflect on their 15-hour DIY volunteering journey.",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=5500 --browser=chrome",
+    "dev": "live-server --port=5500",
+    "validate": "html-validate index.html",
+    "lint:css": "stylelint css/**/*.css",
+    "lint:js": "eslint js/**/*.js",
+    "format": "prettier --write .",
+    "build": "echo 'No build process needed for static site'",
+    "deploy": "echo 'Ready for deployment - upload files to web server'"
+  },
+  "keywords": [
+    "education",
+    "volunteering",
+    "republic-polytechnic",
+    "diy",
+    "student",
+    "coaching",
+    "accessibility",
+    "responsive",
+    "web-development"
+  ],
+  "author": "Republic Polytechnic",
+  "license": "Educational",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/republic-polytechnic/diy-education-coach.git"
+  },
+  "bugs": {
+    "url": "https://github.com/republic-polytechnic/diy-education-coach/issues"
+  },
+  "homepage": "https://github.com/republic-polytechnic/diy-education-coach#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "html-validate": "^8.0.0",
+    "stylelint": "^15.10.0",
+    "eslint": "^8.45.0",
+    "prettier": "^3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

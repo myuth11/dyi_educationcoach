@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DIY Education Coach - Your companion for planning and reflecting on your 15-hour DIY volunteering journey at Republic Polytechnic">
+    <meta name="author" content="Republic Polytechnic">
+    <title>DIY Education Coach | Republic Polytechnic</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                    <h1>DIY Education Coach</h1>
+                </div>
+                <div class="rp-branding">
+                    <span class="rp-text">Republic Polytechnic</span>
+                </div>
+            </div>
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <button class="nav-btn" onclick="scrollToChatbot()" aria-label="Navigate to chatbot">
+                    <i class="fas fa-robot" aria-hidden="true"></i>
+                    Start Coaching
+                </button>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main" role="main">
+        <!-- Introduction Section -->
+        <section class="intro-section">
+            <div class="container">
+                <div class="intro-content">
+                    <h2>Welcome to Your DIY Volunteering Journey! 🌟</h2>
+                    <p class="intro-text">
+                        Ready to make a difference while growing personally and professionally? 
+                        Our DIY Education Coach is here to guide you through every step of your 
+                        15-hour volunteering adventure. Whether you're planning your activities, 
+                        preparing for meaningful experiences, or reflecting on your impact, 
+                        we've got you covered!
+                    </p>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                            <h3>Plan</h3>
+                            <p>Discover volunteering opportunities that align with your interests and goals</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-hands-helping" aria-hidden="true"></i>
+                            <h3>Prepare</h3>
+                            <p>Get ready with tips, tools, and strategies for impactful volunteering</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-brain" aria-hidden="true"></i>
+                            <h3>Reflect</h3>
+                            <p>Process your experiences and identify key learnings for personal growth</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chatbot Section -->
+        <section id="chatbot-section" class="chatbot-section" aria-labelledby="chatbot-title">
+            <div class="container">
+                <div class="chatbot-header">
+                    <h2 id="chatbot-title">Your Personal DIY Coach</h2>
+                    <p class="chatbot-description">
+                        Chat with our AI coach to get personalized guidance for your DIY volunteering journey. 
+                        Ask questions, get recommendations, and receive support every step of the way!
+                    </p>
+                </div>
+                
+                <div class="chatbot-container">
+                    <div class="chatbot-wrapper">
+                        <iframe 
+                            src="https://huggingface.co/spaces/YOUR_SPACE/YOUR_FLOW"
+                            title="DIY Education Coach Chatbot"
+                            frameborder="0"
+                            width="100%"
+                            height="600"
+                            loading="lazy"
+                            allowfullscreen>
+                            <p>Your browser does not support iframes. Please visit 
+                               <a href="https://huggingface.co/spaces/YOUR_SPACE/YOUR_FLOW" target="_blank" rel="noopener noreferrer">
+                                   the chatbot directly
+                               </a>
+                            </p>
+                        </iframe>
+                    </div>
+                    
+                    <div class="chatbot-info">
+                        <div class="info-card">
+                            <h3>💡 Tips for Better Conversations</h3>
+                            <ul>
+                                <li>Be specific about your interests and available time</li>
+                                <li>Ask about local volunteering opportunities</li>
+                                <li>Share your career goals to get relevant suggestions</li>
+                                <li>Don't hesitate to ask follow-up questions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Start Your Journey?</h2>
+                    <p>Join thousands of RP students who have already made their mark through DIY volunteering!</p>
+                    <button class="cta-button" onclick="scrollToChatbot()" aria-label="Start conversation with DIY coach">
+                        <i class="fas fa-rocket" aria-hidden="true"></i>
+                        Let's Get Started!
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DIY Education Coach</h3>
+                    <p>Empowering Republic Polytechnic students through meaningful volunteering experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#chatbot-section" aria-label="Navigate to chatbot">Start Coaching</a></li>
+                        <li><a href="https://www.rp.edu.sg" target="_blank" rel="noopener noreferrer">RP Website</a></li>
+                        <li><a href="mailto:diy@rp.edu.sg">Contact Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/republicpolytechnic" target="_blank" rel="noopener noreferrer" aria-label="Follow RP on Facebook">
+                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.instagram.com/republicpoly" target="_blank" rel="noopener noreferrer" aria-label="Follow RP on Instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/school/republic-polytechnic" target="_blank" rel="noopener noreferrer" aria-label="Follow RP on LinkedIn">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Republic Polytechnic. All rights reserved. | Designed with ❤️ for RP students</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html>
