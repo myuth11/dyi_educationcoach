@@ -8,7 +8,7 @@
     <title>DIY Education Coach | Republic Polytechnic</title>
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -30,9 +30,9 @@
                 </div>
             </div>
             <nav class="nav" role="navigation" aria-label="Main navigation">
-                <button class="nav-btn" onclick="scrollToChatbot()" aria-label="Navigate to chatbot">
+                <button class="nav-btn btn btn-primary" onclick="toggleChat()" aria-label="Open DIY Coach chat">
                     <i class="fas fa-robot" aria-hidden="true"></i>
-                    Start Coaching
+                    <span>Start Coaching</span>
                 </button>
                 <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
                     <i class="fas fa-moon" aria-hidden="true"></i>
@@ -82,27 +82,58 @@
                 <div class="chatbot-header">
                     <h2 id="chatbot-title">Your Personal DIY Coach</h2>
                     <p class="chatbot-description">
-                        Chat with our AI coach to get personalized guidance for your DIY volunteering journey. 
-                        Ask questions, get recommendations, and receive support every step of the way!
+                        Ready to get personalized guidance for your DIY volunteering journey? 
+                        Click the chat widget in the bottom-right corner to start a conversation with our AI coach!
                     </p>
                 </div>
                 
-                <div class="chatbot-container">
-                    <div class="chatbot-wrapper">
-                        <iframe 
-                            src="https://huggingface.co/spaces/YOUR_SPACE/YOUR_FLOW"
-                            title="DIY Education Coach Chatbot"
-                            frameborder="0"
-                            width="100%"
-                            height="600"
-                            loading="lazy"
-                            allowfullscreen>
-                            <p>Your browser does not support iframes. Please visit 
-                               <a href="https://huggingface.co/spaces/YOUR_SPACE/YOUR_FLOW" target="_blank" rel="noopener noreferrer">
-                                   the chatbot directly
-                               </a>
-                            </p>
-                        </iframe>
+                <div class="chatbot-showcase">
+                    <div class="showcase-content">
+                        <div class="showcase-features">
+                            <div class="feature-highlight">
+                                <i class="fas fa-rocket" aria-hidden="true"></i>
+                                <h3>Instant Responses</h3>
+                                <p>Get immediate answers to your volunteering questions</p>
+                            </div>
+                            <div class="feature-highlight">
+                                <i class="fas fa-brain" aria-hidden="true"></i>
+                                <h3>Smart Recommendations</h3>
+                                <p>Receive personalized suggestions based on your interests</p>
+                            </div>
+                            <div class="feature-highlight">
+                                <i class="fas fa-heart" aria-hidden="true"></i>
+                                <h3>24/7 Support</h3>
+                                <p>Your DIY coach is always available to help</p>
+                            </div>
+                        </div>
+                        
+                        <div class="showcase-demo">
+                            <div class="demo-chat">
+                                <div class="demo-header">
+                                    <div class="demo-avatar">
+                                        <i class="fas fa-user-graduate"></i>
+                                    </div>
+                                    <span>Ask DIY Coach 👩‍🏫</span>
+                                </div>
+                                <div class="demo-messages">
+                                    <div class="demo-message bot">
+                                        <i class="fas fa-robot"></i>
+                                        <span>Hi! How can I help you with your volunteering journey?</span>
+                                    </div>
+                                    <div class="demo-message user">
+                                        <span>I want to volunteer with children</span>
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="demo-message bot">
+                                        <i class="fas fa-robot"></i>
+                                        <span>Great choice! I can suggest several child-focused opportunities near you...</span>
+                                    </div>
+                                </div>
+                                <div class="demo-input">
+                                    <span>Click the chat icon to start! →</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="chatbot-info">
@@ -124,9 +155,9 @@
         <section class="cta-section">
             <div class="container">
                 <div class="cta-content">
-                    <h2>Ready to Start Your Journey?</h2>
+                    <h2 class="text-gradient">Ready to Start Your Journey?</h2>
                     <p>Join thousands of RP students who have already made their mark through DIY volunteering!</p>
-                    <button class="cta-button" onclick="scrollToChatbot()" aria-label="Start conversation with DIY coach">
+                    <button class="cta-button btn btn-primary" onclick="toggleChat()" aria-label="Start conversation with DIY coach">
                         <i class="fas fa-rocket" aria-hidden="true"></i>
                         Let's Get Started!
                     </button>
@@ -146,7 +177,7 @@
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#chatbot-section" aria-label="Navigate to chatbot">Start Coaching</a></li>
+                        <li><a href="#" onclick="toggleChat(); return false;" aria-label="Open DIY Coach chat">Start Coaching</a></li>
                         <li><a href="https://www.rp.edu.sg" target="_blank" rel="noopener noreferrer">RP Website</a></li>
                         <li><a href="mailto:diy@rp.edu.sg">Contact Support</a></li>
                     </ul>
@@ -171,6 +202,85 @@
             </div>
         </div>
     </footer>
+
+    <!-- Floating Chat Widget -->
+    <div id="chat-widget" class="chat-widget">
+        <!-- Chat Toggle Button -->
+        <button id="chat-toggle" class="chat-toggle" aria-label="Open DIY Coach chat">
+            <i class="fas fa-comments" id="chat-icon"></i>
+            <i class="fas fa-times" id="close-icon" style="display: none;"></i>
+            <div class="chat-badge">💬</div>
+        </button>
+        
+        <!-- Chat Box -->
+        <div id="chat-box" class="chat-box">
+            <!-- Chat Header -->
+            <div class="chat-header">
+                <div class="chat-header-content">
+                    <div class="chat-avatar">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="chat-header-text">
+                        <h4>Ask DIY Coach 👩‍🏫</h4>
+                        <span class="chat-status">Online • Ready to help</span>
+                    </div>
+                </div>
+                <button id="chat-minimize" class="chat-minimize" aria-label="Minimize chat">
+                    <i class="fas fa-minus"></i>
+                </button>
+            </div>
+            
+            <!-- Chat Messages -->
+            <div id="chat-messages" class="chat-messages">
+                <div class="welcome-message">
+                    <div class="message bot-message">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <p>Hi there! 👋 I'm your DIY Education Coach. I'm here to help you plan, prepare, and reflect on your 15-hour volunteering journey. What would you like to know?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Typing Indicator -->
+            <div id="typing-indicator" class="typing-indicator" style="display: none;">
+                <div class="message bot-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <div class="typing-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Chat Input -->
+            <div class="chat-input-container">
+                <form id="chat-form" class="chat-form">
+                    <div class="chat-input-wrapper">
+                        <textarea 
+                            id="chat-input" 
+                            class="chat-input" 
+                            placeholder="Type your message..."
+                            rows="1"
+                            maxlength="1000"></textarea>
+                        <button type="submit" id="chat-send" class="chat-send" aria-label="Send message">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="chat-footer">
+                    <small>Powered by Flowise • DIY Education Coach</small>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Custom JavaScript -->
     <script src="js/app.js"></script>
