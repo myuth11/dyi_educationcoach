@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setupKeyboardNavigation();
     setupIntersectionObserver();
     setupModernAnimations();
+    initializeScrollNavigation();
     
     console.log('🚀 DIY Education Coach (Modern Edition) initialized successfully!');
 });
@@ -634,6 +635,44 @@ function highlightChatbotSection() {
             chatbotSection.classList.remove('highlighted');
         }, HIGHLIGHT_DURATION);
     }
+}
+
+// ===== SCROLL-BASED NAVIGATION =====
+
+/**
+ * Initialize scroll-based compact navigation
+ */
+function initializeScrollNavigation() {
+    const header = document.querySelector('.header');
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    function updateNavigationState() {
+        const scrollY = window.scrollY;
+        
+        // Add scrolled class when user scrolls down past 50px
+        if (scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+        
+        lastScrollY = scrollY;
+        ticking = false;
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(updateNavigationState);
+            ticking = true;
+        }
+    }
+
+    // Listen for scroll events with throttling
+    window.addEventListener('scroll', requestTick, { passive: true });
+    
+    // Initialize state
+    updateNavigationState();
 }
 
 // ===== FLOATING CHAT WIDGET =====
