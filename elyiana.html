@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DIY Education Coach - Your companion for planning and reflecting on your 15-hour DIY volunteering journey at Republic Polytechnic">
+    <meta name="description" content="Activity Planner - Plan your DIY volunteering activities with Elyiana's guidance">
     <meta name="author" content="Republic Polytechnic">
-    <title>DIY Education Coach | Republic Polytechnic</title>
+    <title>Activity Planner | DIY Education Coach</title>
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -31,11 +31,11 @@
             </div>
             <nav class="nav" role="navigation" aria-label="Main navigation">
                 <div class="nav-menu">
-                    <a href="index.html" class="nav-link active" aria-label="Home">
+                    <a href="index.html" class="nav-link" aria-label="Home">
                         <i class="fas fa-home" aria-hidden="true"></i>
                         <span>Home</span>
                     </a>
-                    <a href="elyiana.html" class="nav-link" aria-label="Activity Planner">
+                    <a href="elyiana.html" class="nav-link active" aria-label="Activity Planner">
                         <i class="fas fa-calendar-alt" aria-hidden="true"></i>
                         <span>Activity Planner</span>
                     </a>
@@ -71,33 +71,46 @@
 
     <!-- Main Content -->
     <main class="main" role="main">
-        <!-- Introduction Section -->
-        <section class="intro-section">
+        <!-- Page Header -->
+        <section class="page-header">
             <div class="container">
-                <div class="intro-content">
-                    <h2>Welcome to Your DIY Volunteering Journey! 🌟</h2>
-                    <p class="intro-text">
-                        Ready to make a difference while growing personally and professionally? 
-                        Our DIY Education Coach is here to guide you through every step of your 
-                        15-hour volunteering adventure. Whether you're planning your activities, 
-                        preparing for meaningful experiences, or reflecting on your impact, 
-                        we've got you covered!
+                <div class="page-header-content">
+                    <div class="page-icon">
+                        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                    </div>
+                    <h2>Activity Planner</h2>
+                    <p class="page-subtitle">Plan your perfect DIY volunteering journey with personalized activity recommendations</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Description Section -->
+        <section class="description-section">
+            <div class="container">
+                <div class="description-content">
+                    <h3>Meet Your Activity Planning Assistant 📅</h3>
+                    <p>
+                        Hi there! I'm Elyiana, your dedicated Activity Planner. I'm here to help you discover and plan 
+                        meaningful volunteering activities that align with your interests, schedule, and career goals. 
+                        Whether you're looking for weekend opportunities, skill-building experiences, or community 
+                        impact projects, I'll guide you every step of the way!
                     </p>
+                    
                     <div class="features-grid">
                         <div class="feature-card">
-                            <i class="fas fa-lightbulb" aria-hidden="true"></i>
-                            <h3>Plan</h3>
-                            <p>Discover volunteering opportunities that align with your interests and goals</p>
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                            <h4>Activity Discovery</h4>
+                            <p>Find volunteering opportunities that match your interests and availability</p>
                         </div>
                         <div class="feature-card">
-                            <i class="fas fa-hands-helping" aria-hidden="true"></i>
-                            <h3>Prepare</h3>
-                            <p>Get ready with tips, tools, and strategies for impactful volunteering</p>
+                            <i class="fas fa-clock" aria-hidden="true"></i>
+                            <h4>Schedule Planning</h4>
+                            <p>Plan your 15-hour journey with flexible scheduling options</p>
                         </div>
                         <div class="feature-card">
-                            <i class="fas fa-brain" aria-hidden="true"></i>
-                            <h3>Reflect</h3>
-                            <p>Process your experiences and identify key learnings for personal growth</p>
+                            <i class="fas fa-bullseye" aria-hidden="true"></i>
+                            <h4>Goal Alignment</h4>
+                            <p>Connect activities to your personal and professional development goals</p>
                         </div>
                     </div>
                 </div>
@@ -105,90 +118,62 @@
         </section>
 
         <!-- Chatbot Section -->
-        <section id="chatbot-section" class="chatbot-section" aria-labelledby="chatbot-title">
+        <section class="chatbot-section">
             <div class="container">
-                <div class="chatbot-header">
-                    <h2 id="chatbot-title">Your Personal DIY Coach</h2>
-                    <p class="chatbot-description">
-                        Ready to get personalized guidance for your DIY volunteering journey? 
-                        Click the chat widget in the bottom-right corner to start a conversation with our AI coach!
-                    </p>
-                </div>
-                
-                <div class="chatbot-showcase">
-                    <div class="showcase-content">
-                        <div class="showcase-features">
-                            <div class="feature-highlight">
-                                <i class="fas fa-rocket" aria-hidden="true"></i>
-                                <h3>Instant Responses</h3>
-                                <p>Get immediate answers to your volunteering questions</p>
-                            </div>
-                            <div class="feature-highlight">
-                                <i class="fas fa-brain" aria-hidden="true"></i>
-                                <h3>Smart Recommendations</h3>
-                                <p>Receive personalized suggestions based on your interests</p>
-                            </div>
-                            <div class="feature-highlight">
-                                <i class="fas fa-heart" aria-hidden="true"></i>
-                                <h3>24/7 Support</h3>
-                                <p>Your DIY coach is always available to help</p>
+                <div class="chatbot-wrapper">
+                    <div class="chatbot-header">
+                        <h3>Start Planning Your Activities</h3>
+                        <p>Chat with Elyiana to get personalized activity recommendations and create your volunteering schedule!</p>
+                    </div>
+                    
+                    <!-- Placeholder for Flowise Chatbot -->
+                    <div class="chatbot-container">
+                        <div class="chatbot-placeholder">
+                            <div class="placeholder-content">
+                                <i class="fas fa-robot" aria-hidden="true"></i>
+                                <h4>Activity Planner Chatbot</h4>
+                                <p>Flowise chatbot will be integrated here</p>
+                                <button class="btn btn-primary" onclick="alert('Chatbot integration coming soon!')">
+                                    <i class="fas fa-comments"></i>
+                                    Start Planning
+                                </button>
                             </div>
                         </div>
                         
-                        <div class="showcase-demo">
-                            <div class="demo-chat">
-                                <div class="demo-header">
-                                    <div class="demo-avatar">
-                                        <i class="fas fa-user-graduate"></i>
-                                    </div>
-                                    <span>Ask DIY Coach 👩‍🏫</span>
-                                </div>
-                                <div class="demo-messages">
-                                    <div class="demo-message bot">
-                                        <i class="fas fa-robot"></i>
-                                        <span>Hi! How can I help you with your volunteering journey?</span>
-                                    </div>
-                                    <div class="demo-message user">
-                                        <span>I want to volunteer with children</span>
-                                        <i class="fas fa-user"></i>
-                                    </div>
-                                    <div class="demo-message bot">
-                                        <i class="fas fa-robot"></i>
-                                        <span>Great choice! I can suggest several child-focused opportunities near you...</span>
-                                    </div>
-                                </div>
-                                <div class="demo-input">
-                                    <span>Click the chat icon to start! →</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="chatbot-info">
-                        <div class="info-card">
-                            <h3>💡 Tips for Better Conversations</h3>
-                            <ul>
-                                <li>Be specific about your interests and available time</li>
-                                <li>Ask about local volunteering opportunities</li>
-                                <li>Share your career goals to get relevant suggestions</li>
-                                <li>Don't hesitate to ask follow-up questions</li>
-                            </ul>
-                        </div>
+                        <!-- Replace this comment with your Flowise iframe/script -->
+                        <!-- <iframe src="YOUR_FLOWISE_URL" width="100%" height="500" frameborder="0"></iframe> -->
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Call to Action Section -->
-        <section class="cta-section">
+        <!-- Tips Section -->
+        <section class="tips-section">
             <div class="container">
-                <div class="cta-content">
-                    <h2 class="text-gradient">Ready to Start Your Journey?</h2>
-                    <p>Join thousands of RP students who have already made their mark through DIY volunteering!</p>
-                    <button class="cta-button btn btn-primary" onclick="toggleChat()" aria-label="Start conversation with DIY coach">
-                        <i class="fas fa-rocket" aria-hidden="true"></i>
-                        Let's Get Started!
-                    </button>
+                <div class="tips-content">
+                    <h3>💡 Planning Tips</h3>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <i class="fas fa-heart" aria-hidden="true"></i>
+                            <h4>Follow Your Passion</h4>
+                            <p>Choose activities that align with causes you care about for maximum impact and satisfaction</p>
+                        </div>
+                        <div class="tip-card">
+                            <i class="fas fa-balance-scale" aria-hidden="true"></i>
+                            <h4>Balance Your Schedule</h4>
+                            <p>Mix shorter commitments with longer projects to maintain flexibility and momentum</p>
+                        </div>
+                        <div class="tip-card">
+                            <i class="fas fa-users" aria-hidden="true"></i>
+                            <h4>Consider Team Opportunities</h4>
+                            <p>Group activities can be more fun and help you build connections with fellow volunteers</p>
+                        </div>
+                        <div class="tip-card">
+                            <i class="fas fa-chart-line" aria-hidden="true"></i>
+                            <h4>Track Your Progress</h4>
+                            <p>Keep a log of your hours and experiences to meet your 15-hour requirement</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -205,9 +190,10 @@
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#" onclick="toggleChat(); return false;" aria-label="Open DIY Coach chat">Start Coaching</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="elyiana.html">Activity Planner</a></li>
+                        <li><a href="myu.html">Education Coach</a></li>
                         <li><a href="https://www.rp.edu.sg" target="_blank" rel="noopener noreferrer">RP Website</a></li>
-                        <li><a href="mailto:diy@rp.edu.sg">Contact Support</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -246,11 +232,11 @@
             <div class="chat-header">
                 <div class="chat-header-content">
                     <div class="chat-avatar">
-                        <i class="fas fa-user-graduate"></i>
+                        <i class="fas fa-calendar-alt"></i>
                     </div>
                     <div class="chat-header-text">
-                        <h4>Ask DIY Coach 👩‍🏫</h4>
-                        <span class="chat-status">Online • Ready to help</span>
+                        <h4>Activity Planner 📅</h4>
+                        <span class="chat-status">Online • Ready to plan</span>
                     </div>
                 </div>
                 <button id="chat-minimize" class="chat-minimize" aria-label="Minimize chat">
@@ -266,7 +252,7 @@
                             <i class="fas fa-robot"></i>
                         </div>
                         <div class="message-content">
-                            <p>Hi there! 👋 I'm your DIY Education Coach. I'm here to help you plan, prepare, and reflect on your 15-hour volunteering journey. What would you like to know?</p>
+                            <p>Hi! I'm Elyiana, your Activity Planner. I'll help you discover and plan amazing volunteering activities. What kind of activities interest you? 📅✨</p>
                         </div>
                     </div>
                 </div>
@@ -295,7 +281,7 @@
                         <textarea 
                             id="chat-input" 
                             class="chat-input" 
-                            placeholder="Type your message..."
+                            placeholder="Ask about volunteering activities..."
                             rows="1"
                             maxlength="1000"></textarea>
                         <button type="submit" id="chat-send" class="chat-send" aria-label="Send message">
@@ -304,7 +290,7 @@
                     </div>
                 </form>
                 <div class="chat-footer">
-                    <small>Powered by Flowise • DIY Education Coach</small>
+                    <small>Powered by Flowise • Activity Planner</small>
                 </div>
             </div>
         </div>

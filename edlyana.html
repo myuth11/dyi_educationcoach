@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Beneficiary Finder - Connect with meaningful causes and beneficiaries with Edlyana's guidance">
+    <meta name="author" content="Republic Polytechnic">
+    <title>Beneficiary Finder | DIY Education Coach</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                    <h1>DIY Education Coach</h1>
+                </div>
+                <div class="rp-branding">
+                    <span class="rp-text">Republic Polytechnic</span>
+                </div>
+            </div>
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link" aria-label="Home">
+                        <i class="fas fa-home" aria-hidden="true"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="elyiana.html" class="nav-link" aria-label="Activity Planner">
+                        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                        <span>Activity Planner</span>
+                    </a>
+                    <a href="myu.html" class="nav-link" aria-label="Education Coach">
+                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                        <span>Education Coach</span>
+                    </a>
+                    <a href="alaster.html" class="nav-link" aria-label="Project Hub">
+                        <i class="fas fa-project-diagram" aria-hidden="true"></i>
+                        <span>Project Hub</span>
+                    </a>
+                    <a href="weiqiang.html" class="nav-link" aria-label="Reflection Coach">
+                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                        <span>Reflection Coach</span>
+                    </a>
+                    <a href="edlyana.html" class="nav-link active" aria-label="Beneficiary Finder">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <span>Beneficiary Finder</span>
+                    </a>
+                </div>
+                <div class="nav-actions">
+                    <button class="nav-btn btn btn-primary" onclick="toggleChat()" aria-label="Open DIY Coach chat">
+                        <i class="fas fa-robot" aria-hidden="true"></i>
+                        <span>Start Coaching</span>
+                    </button>
+                    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main" role="main">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header-content">
+                    <div class="page-icon">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </div>
+                    <h2>Beneficiary Finder</h2>
+                    <p class="page-subtitle">Discover meaningful causes and connect with organizations that need your help</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Description Section -->
+        <section class="description-section">
+            <div class="container">
+                <div class="description-content">
+                    <h3>Meet Your Connection Specialist 🔍</h3>
+                    <p>
+                        Hi there! I'm Edlyana, your Beneficiary Finder specialist. I'm passionate about 
+                        connecting volunteers with causes that truly matter to them. Whether you're looking 
+                        to help children, support the elderly, protect the environment, or contribute to 
+                        community development, I'll help you find the perfect match. Let's discover where 
+                        your skills and passion can make the biggest difference!
+                    </p>
+                    
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <i class="fas fa-heart" aria-hidden="true"></i>
+                            <h4>Cause Matching</h4>
+                            <p>Find causes that align with your values and interests</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <h4>Location-Based Search</h4>
+                            <p>Discover volunteer opportunities in your preferred areas</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-handshake" aria-hidden="true"></i>
+                            <h4>Organization Profiles</h4>
+                            <p>Learn about organizations and their impact in the community</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chatbot Section -->
+        <section class="chatbot-section">
+            <div class="container">
+                <div class="chatbot-wrapper">
+                    <div class="chatbot-header">
+                        <h3>Find Your Perfect Cause</h3>
+                        <p>Chat with Edlyana to discover organizations and beneficiaries that match your interests!</p>
+                    </div>
+                    
+                    <!-- Placeholder for Flowise Chatbot -->
+                    <div class="chatbot-container">
+                        <div class="chatbot-placeholder">
+                            <div class="placeholder-content">
+                                <i class="fas fa-robot" aria-hidden="true"></i>
+                                <h4>Beneficiary Finder Chatbot</h4>
+                                <p>Flowise chatbot will be integrated here</p>
+                                <button class="btn btn-primary" onclick="alert('Chatbot integration coming soon!')">
+                                    <i class="fas fa-comments"></i>
+                                    Start Searching
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Replace this comment with your Flowise iframe/script -->
+                        <!-- <iframe src="YOUR_FLOWISE_URL" width="100%" height="500" frameborder="0"></iframe> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cause Categories Section -->
+        <section class="categories-section">
+            <div class="container">
+                <div class="categories-content">
+                    <h3>🎯 Popular Cause Categories</h3>
+                    <div class="categories-grid">
+                        <div class="category-card">
+                            <i class="fas fa-child" aria-hidden="true"></i>
+                            <h4>Children & Youth</h4>
+                            <p>Support education, mentorship, and development programs for young people</p>
+                            <div class="category-examples">
+                                <span>Tutoring</span>
+                                <span>Mentorship</span>
+                                <span>Play therapy</span>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <i class="fas fa-user-friends" aria-hidden="true"></i>
+                            <h4>Elderly Care</h4>
+                            <p>Provide companionship and support for senior citizens in the community</p>
+                            <div class="category-examples">
+                                <span>Companionship</span>
+                                <span>Activities</span>
+                                <span>Digital literacy</span>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <i class="fas fa-leaf" aria-hidden="true"></i>
+                            <h4>Environment</h4>
+                            <p>Contribute to environmental conservation and sustainability initiatives</p>
+                            <div class="category-examples">
+                                <span>Beach cleanup</span>
+                                <span>Tree planting</span>
+                                <span>Recycling</span>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <i class="fas fa-home" aria-hidden="true"></i>
+                            <h4>Community Development</h4>
+                            <p>Help build stronger, more resilient communities through various programs</p>
+                            <div class="category-examples">
+                                <span>Food distribution</span>
+                                <span>Community events</span>
+                                <span>Skill training</span>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <i class="fas fa-paw" aria-hidden="true"></i>
+                            <h4>Animal Welfare</h4>
+                            <p>Care for and protect animals through shelters and rescue organizations</p>
+                            <div class="category-examples">
+                                <span>Animal care</span>
+                                <span>Shelter support</span>
+                                <span>Adoption events</span>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <i class="fas fa-heartbeat" aria-hidden="true"></i>
+                            <h4>Health & Wellness</h4>
+                            <p>Support health initiatives and assist those with medical needs</p>
+                            <div class="category-examples">
+                                <span>Health screening</span>
+                                <span>Wellness programs</span>
+                                <span>Patient support</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Tips Section -->
+        <section class="tips-section">
+            <div class="container">
+                <div class="tips-content">
+                    <h3>💡 Finding the Right Match</h3>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <i class="fas fa-compass" aria-hidden="true"></i>
+                            <h4>Follow Your Passion</h4>
+                            <p>Choose causes that genuinely interest you for a more fulfilling experience</p>
+                        </div>
+                        <div class="tip-card">
+                            <i class="fas fa-clock" aria-hidden="true"></i>
+                            <h4>Consider Your Schedule</h4>
+                            <p>Look for opportunities that fit your availability and time commitments</p>
+                        </div>
+                        <div class="tip-card">
+                            <i class="fas fa-tools" aria-hidden="true"></i>
+                            <h4>Use Your Skills</h4>
+                            <p>Find ways to apply your existing skills or learn new ones</p>
+                        </div>
+                        <div class="tip-card">
+                            <i class="fas fa-question-circle" aria-hidden="true"></i>
+                            <h4>Ask Questions</h4>
+                            <p>Don't hesitate to reach out to organizations for more information</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Organization Types Section -->
+        <section class="organizations-section">
+            <div class="container">
+                <div class="organizations-content">
+                    <h3>🏢 Types of Organizations</h3>
+                    <div class="org-types-grid">
+                        <div class="org-type">
+                            <i class="fas fa-building"></i>
+                            <h4>Non-Profit Organizations</h4>
+                            <p>Charitable organizations focused on social causes</p>
+                        </div>
+                        <div class="org-type">
+                            <i class="fas fa-hospital"></i>
+                            <h4>Healthcare Institutions</h4>
+                            <p>Hospitals, clinics, and medical centers</p>
+                        </div>
+                        <div class="org-type">
+                            <i class="fas fa-school"></i>
+                            <h4>Educational Institutions</h4>
+                            <p>Schools, libraries, and learning centers</p>
+                        </div>
+                        <div class="org-type">
+                            <i class="fas fa-users"></i>
+                            <h4>Community Centers</h4>
+                            <p>Local community hubs and social services</p>
+                        </div>
+                        <div class="org-type">
+                            <i class="fas fa-seedling"></i>
+                            <h4>Environmental Groups</h4>
+                            <p>Conservation and sustainability organizations</p>
+                        </div>
+                        <div class="org-type">
+                            <i class="fas fa-hands-helping"></i>
+                            <h4>Social Services</h4>
+                            <p>Organizations providing social support and assistance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DIY Education Coach</h3>
+                    <p>Empowering Republic Polytechnic students through meaningful volunteering experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="elyiana.html">Activity Planner</a></li>
+                        <li><a href="myu.html">Education Coach</a></li>
+                        <li><a href="https://www.rp.edu.sg" target="_blank" rel="noopener noreferrer">RP Website</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/republicpolytechnic" target="_blank" rel="noopener noreferrer" aria-label="Follow RP on Facebook">
+                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.instagram.com/republicpoly" target="_blank" rel="noopener noreferrer" aria-label="Follow RP on Instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/school/republic-polytechnic" target="_blank" rel="noopener noreferrer" aria-label="Follow RP on LinkedIn">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Republic Polytechnic. All rights reserved. | Designed with ❤️ for RP students</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Chat Widget -->
+    <div id="chat-widget" class="chat-widget">
+        <!-- Chat Toggle Button -->
+        <button id="chat-toggle" class="chat-toggle" aria-label="Open DIY Coach chat">
+            <i class="fas fa-comments" id="chat-icon"></i>
+            <i class="fas fa-times" id="close-icon" style="display: none;"></i>
+            <div class="chat-badge">💬</div>
+        </button>
+        
+        <!-- Chat Box -->
+        <div id="chat-box" class="chat-box">
+            <!-- Chat Header -->
+            <div class="chat-header">
+                <div class="chat-header-content">
+                    <div class="chat-avatar">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="chat-header-text">
+                        <h4>Beneficiary Finder 🔍</h4>
+                        <span class="chat-status">Online • Ready to connect</span>
+                    </div>
+                </div>
+                <button id="chat-minimize" class="chat-minimize" aria-label="Minimize chat">
+                    <i class="fas fa-minus"></i>
+                </button>
+            </div>
+            
+            <!-- Chat Messages -->
+            <div id="chat-messages" class="chat-messages">
+                <div class="welcome-message">
+                    <div class="message bot-message">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <p>Hi! I'm Edlyana, your Beneficiary Finder. I'll help you discover meaningful causes and connect with organizations that need your help. What kind of impact would you like to make? 🔍✨</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Typing Indicator -->
+            <div id="typing-indicator" class="typing-indicator" style="display: none;">
+                <div class="message bot-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <div class="typing-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Chat Input -->
+            <div class="chat-input-container">
+                <form id="chat-form" class="chat-form">
+                    <div class="chat-input-wrapper">
+                        <textarea 
+                            id="chat-input" 
+                            class="chat-input" 
+                            placeholder="What causes interest you..."
+                            rows="1"
+                            maxlength="1000"></textarea>
+                        <button type="submit" id="chat-send" class="chat-send" aria-label="Send message">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="chat-footer">
+                    <small>Powered by Flowise • Beneficiary Finder</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html>

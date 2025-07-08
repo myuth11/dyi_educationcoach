@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reflection Coach - Reflect on your DIY volunteering experiences with Wei Qiang's guidance">
+    <meta name="author" content="Republic Polytechnic">
+    <title>Reflection Coach | DIY Education Coach</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                    <h1>DIY Education Coach</h1>
+                </div>
+                <div class="rp-branding">
+                    <span class="rp-text">Republic Polytechnic</span>
+                </div>
+            </div>
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link" aria-label="Home">
+                        <i class="fas fa-home" aria-hidden="true"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="elyiana.html" class="nav-link" aria-label="Activity Planner">
+                        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                        <span>Activity Planner</span>
+                    </a>
+                    <a href="myu.html" class="nav-link" aria-label="Education Coach">
+                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                        <span>Education Coach</span>
+                    </a>
+                    <a href="alaster.html" class="nav-link" aria-label="Project Hub">
+                        <i class="fas fa-project-diagram" aria-hidden="true"></i>
+                        <span>Project Hub</span>
+                    </a>
+                    <a href="weiqiang.html" class="nav-link active" aria-label="Reflection Coach">
+                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                        <span>Reflection Coach</span>
+                    </a>
+                    <a href="edlyana.html" class="nav-link" aria-label="Beneficiary Finder">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <span>Beneficiary Finder</span>
+                    </a>
+                </div>
+                <div class="nav-actions">
+                    <button class="nav-btn btn btn-primary" onclick="toggleChat()" aria-label="Open DIY Coach chat">
+                        <i class="fas fa-robot" aria-hidden="true"></i>
+                        <span>Start Coaching</span>
+                    </button>
+                    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main" role="main">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header-content">
+                    <div class="page-icon">
+                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                    </div>
+                    <h2>Reflection Coach</h2>
+                    <p class="page-subtitle">Transform your volunteering experiences into meaningful insights and personal growth</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Description Section -->
+        <section class="description-section">
+            <div class="container">
+                <div class="description-content">
+                    <h3>Meet Your Reflection Guide 💭</h3>
+                    <p>
+                        Hello! I'm Wei Qiang, your dedicated Reflection Coach. I believe that true learning 
+                        happens when we take time to reflect on our experiences. I'm here to guide you through 
+                        thoughtful reflection on your DIY volunteering journey, helping you extract valuable 
+                        insights, celebrate your growth, and identify areas for future development. Together, 
+                        we'll transform your experiences into lasting wisdom.
+                    </p>
+                    
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <i class="fas fa-mirror" aria-hidden="true"></i>
+                            <h4>Deep Reflection</h4>
+                            <p>Explore your experiences through guided reflection exercises and prompts</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-seedling" aria-hidden="true"></i>
+                            <h4>Growth Insights</h4>
+                            <p>Identify personal and professional growth from your volunteer experiences</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-book" aria-hidden="true"></i>
+                            <h4>Learning Documentation</h4>
+                            <p>Create meaningful records of your learning journey and achievements</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chatbot Section -->
+        <section class="chatbot-section">
+            <div class="container">
+                <div class="chatbot-wrapper">
+                    <div class="chatbot-header">
+                        <h3>Start Your Reflection Journey</h3>
+                        <p>Chat with Wei Qiang to explore your experiences and uncover meaningful insights!</p>
+                    </div>
+                    
+                    <!-- Placeholder for Flowise Chatbot -->
+                    <div class="chatbot-container">
+                        <div class="chatbot-placeholder">
+                            <div class="placeholder-content">
+                                <i class="fas fa-robot" aria-hidden="true"></i>
+                                <h4>Reflection Coach Chatbot</h4>
+                                <p>Flowise chatbot will be integrated here</p>
+                                <button class="btn btn-primary" onclick="alert('Chatbot integration coming soon!')">
+                                    <i class="fas fa-comments"></i>
+                                    Start Reflecting
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Replace this comment with your Flowise iframe/script -->
+                        <!-- <iframe src="YOUR_FLOWISE_URL" width="100%" height="500" frameborder="0"></iframe> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reflection Framework Section -->
+        <section class="framework-section">
+            <div class="container">
+                <div class="framework-content">
+                    <h3>🔍 Reflection Framework</h3>
+                    <div class="framework-grid">
+                        <div class="framework-card">
+                            <i class="fas fa-eye" aria-hidden="true"></i>
+                            <h4>What? (Description)</h4>
+                            <p>Describe what happened during your volunteering experience</p>
+                            <ul>
+                                <li>Key events and activities</li>
+                                <li>People you interacted with</li>
+                                <li>Challenges you faced</li>
+                                <li>Successes you achieved</li>
+                            </ul>
+                        </div>
+                        <div class="framework-card">
+                            <i class="fas fa-heart" aria-hidden="true"></i>
+                            <h4>So What? (Feelings)</h4>
+                            <p>Explore your emotions and reactions to the experience</p>
+                            <ul>
+                                <li>How did you feel during the experience?</li>
+                                <li>What surprised or challenged you?</li>
+                                <li>What aspects were most rewarding?</li>
+                                <li>How did your perspectives change?</li>
+                            </ul>
+                        </div>
+                        <div class="framework-card">
+                            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                            <h4>Now What? (Learning)</h4>
+                            <p>Identify key learnings and plan for future actions</p>
+                            <ul>
+                                <li>What did you learn about yourself?</li>
+                                <li>What skills did you develop?</li>
+                                <li>How will this impact your future?</li>
+                                <li>What would you do differently?</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reflection Tools Section -->
+        <section class="tools-section">
+            <div class="container">
+                <div class="tools-content">
+                    <h3>🛠️ Reflection Tools</h3>
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <i class="fas fa-journal-whills" aria-hidden="true"></i>
+                            <h4>Reflection Journal</h4>
+                            <p>Maintain a structured journal to document your experiences and insights</p>
+                        </div>
+                        <div class="tool-card">
+                            <i class="fas fa-comments" aria-hidden="true"></i>
+                            <h4>Guided Prompts</h4>
+                            <p>Use thoughtful questions to deepen your reflection and understanding</p>
+                        </div>
+                        <div class="tool-card">
+                            <i class="fas fa-chart-line" aria-hidden="true"></i>
+                            <h4>Growth Tracking</h4>
+                            <p>Monitor your personal and professional development over time</p>
+                        </div>
+                        <div class="tool-card">
+                            <i class="fas fa-share-alt" aria-hidden="true"></i>
+                            <h4>Experience Sharing</h4>
+                            <p>Share insights with peers and learn from their experiences too</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reflection Benefits Section -->
+        <section class="benefits-section">
+            <div class="container">
+                <div class="benefits-content">
+                    <h3>🌟 Benefits of Reflection</h3>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Enhanced Self-Awareness</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>Accelerated Learning</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-bullseye"></i>
+                            <span>Clearer Goal Setting</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-puzzle-piece"></i>
+                            <span>Better Problem Solving</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-handshake"></i>
+                            <span>Improved Relationships</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-trophy"></i>
+                            <span>Greater Confidence</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DIY Education Coach</h3>
+                    <p>Empowering Republic Polytechnic students through meaningful volunteering experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="elyiana.html">Activity Planner</a></li>
+                        <li><a href="myu.html">Education Coach</a></li>
+                        <li><a href="https://www.rp.edu.sg" target="_blank" rel="noopener noreferrer">RP Website</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/republicpolytechnic" target="_blank" rel="noopener noreferrer" aria-label="Follow RP on Facebook">
+                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.instagram.com/republicpoly" target="_blank" rel="noopener noreferrer" aria-label="Follow RP on Instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/school/republic-polytechnic" target="_blank" rel="noopener noreferrer" aria-label="Follow RP on LinkedIn">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Republic Polytechnic. All rights reserved. | Designed with ❤️ for RP students</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Chat Widget -->
+    <div id="chat-widget" class="chat-widget">
+        <!-- Chat Toggle Button -->
+        <button id="chat-toggle" class="chat-toggle" aria-label="Open DIY Coach chat">
+            <i class="fas fa-comments" id="chat-icon"></i>
+            <i class="fas fa-times" id="close-icon" style="display: none;"></i>
+            <div class="chat-badge">💬</div>
+        </button>
+        
+        <!-- Chat Box -->
+        <div id="chat-box" class="chat-box">
+            <!-- Chat Header -->
+            <div class="chat-header">
+                <div class="chat-header-content">
+                    <div class="chat-avatar">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="chat-header-text">
+                        <h4>Reflection Coach 💭</h4>
+                        <span class="chat-status">Online • Ready to reflect</span>
+                    </div>
+                </div>
+                <button id="chat-minimize" class="chat-minimize" aria-label="Minimize chat">
+                    <i class="fas fa-minus"></i>
+                </button>
+            </div>
+            
+            <!-- Chat Messages -->
+            <div id="chat-messages" class="chat-messages">
+                <div class="welcome-message">
+                    <div class="message bot-message">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <p>Hi! I'm Wei Qiang, your Reflection Coach. I'll help you explore your volunteer experiences and discover meaningful insights. What would you like to reflect on today? 💭✨</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Typing Indicator -->
+            <div id="typing-indicator" class="typing-indicator" style="display: none;">
+                <div class="message bot-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <div class="typing-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Chat Input -->
+            <div class="chat-input-container">
+                <form id="chat-form" class="chat-form">
+                    <div class="chat-input-wrapper">
+                        <textarea 
+                            id="chat-input" 
+                            class="chat-input" 
+                            placeholder="Share your experiences..."
+                            rows="1"
+                            maxlength="1000"></textarea>
+                        <button type="submit" id="chat-send" class="chat-send" aria-label="Send message">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="chat-footer">
+                    <small>Powered by Flowise • Reflection Coach</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html>
