@@ -405,15 +405,21 @@ function highlightChatbotSection() {
  * Setup scroll-triggered animations
  */
 function setupScrollAnimations() {
-    const animatedElements = document.querySelectorAll('.feature-card, .info-card, .chatbot-wrapper');
-    
-    animatedElements.forEach((element, index) => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(40px)';
-        element.style.transition = 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-        element.style.transitionDelay = `${index * 0.1}s`;
+    const animatedElements = document.querySelectorAll('.feature-card, .info-card');
+    animatedElements.forEach((el, i) => {
+        // 1) Turn off any transition.
+        el.style.transition = 'none';
+        // 2) Instantly set the hidden state.
+        el.style.opacity   = '1';
+        el.style.transform = 'translateY(40px)';
+        // force a reflow so the browser registers the new styles immediately
+        void el.offsetWidth;
+        // 3) Now enable the smooth transition for the reveal.
+        el.style.transition = 'all 0.6s cubic-bezier(0.25,0.46,0.45,0.94)';
+        el.style.transitionDelay = `${i*0.1}s`;
     });
 }
+
 
 /**
  * Setup modern intersection observer for scroll animations
