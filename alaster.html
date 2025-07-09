@@ -1,359 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Project Hub - Manage and track your DIY volunteering projects with Alaster's guidance">
-    <meta name="author" content="Republic Polytechnic">
-    <title>Project Hub | DIY Education Coach</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Project Hub - Manage and track your DIY volunteering projects with Alaster's guidance">
+  <meta name="author" content="Republic Polytechnic">
+  <title>Project Hub | DIY Education Coach</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .flowise-chatbot-button {
+      position: fixed !important;
+      z-index: 42424242 !important;
+      width: 48px !important;
+      height: 48px !important;
+      background-color: rgb(59, 129, 246) !important;
+      right: 20px !important;
+      bottom: 20px !important;
+      cursor: pointer !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      border-radius: 9999px !important;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06) !important;
+      transition: transform .2s !important;
+      animation: fadeIn .5s ease-in-out !important;
+    }
+    .flowise-chatbot-button:hover {
+      transform: scale(1.10) !important;
+    }
+    .flowise-chatbot-button:active {
+      transform: scale(0.95) !important;
+    }
+    .flowise-chatbot-button svg {
+      fill: #fff !important;
+      width: 28px !important;
+      height: 28px !important;
+    }
+  </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="header" role="banner">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
-                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-                    <h1>DIY Education Coach</h1>
-                </div>
-                <div class="rp-branding">
-                    <span class="rp-text">Republic Polytechnic</span>
-                </div>
-            </div>
-            <nav class="nav" role="navigation" aria-label="Main navigation">
-                <div class="nav-menu">
-                    <a href="index.html" class="nav-link" aria-label="Home">
-                        <i class="fas fa-home" aria-hidden="true"></i>
-                        <span>Home</span>
-                    </a>
-                    <a href="elyiana.html" class="nav-link" aria-label="Activity Planner">
-                        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-                        <span>Activity Planner</span>
-                    </a>
-                    <a href="myu.html" class="nav-link" aria-label="Education Coach">
-                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-                        <span>Education Coach</span>
-                    </a>
-                    <a href="alaster.html" class="nav-link active" aria-label="Project Hub">
-                        <i class="fas fa-project-diagram" aria-hidden="true"></i>
-                        <span>Project Hub</span>
-                    </a>
-                    <a href="weiqiang.html" class="nav-link" aria-label="Reflection Coach">
-                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
-                        <span>Reflection Coach</span>
-                    </a>
-                    <a href="edlyana.html" class="nav-link" aria-label="Beneficiary Finder">
-                        <i class="fas fa-search" aria-hidden="true"></i>
-                        <span>Beneficiary Finder</span>
-                    </a>
-                </div>
-                <div class="nav-actions">
-                    <button class="nav-btn btn btn-primary" onclick="toggleChat()" aria-label="Open DIY Coach chat">
-                        <i class="fas fa-robot" aria-hidden="true"></i>
-                        <span>Start Coaching</span>
-                    </button>
-                    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
-                        <i class="fas fa-moon" aria-hidden="true"></i>
-                    </button>
-                </div>
-            </nav>
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo-section">
+          <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+          <h1>DIY Education Coach</h1>
         </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="main" role="main">
-        <!-- Page Header -->
-        <section class="page-header">
-            <div class="container">
-                <div class="page-header-content">
-                    <div class="page-icon">
-                        <i class="fas fa-project-diagram" aria-hidden="true"></i>
-                    </div>
-                    <h2>Project Hub</h2>
-                    <p class="page-subtitle">Manage, track, and optimize your DIY volunteering projects for maximum impact</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Description Section -->
-        <section class="description-section">
-            <div class="container">
-                <div class="description-content">
-                    <h3>Meet Your Project Management Guide 📊</h3>
-                    <p>
-                        Hey there! I'm Alaster, your Project Hub specialist. I'm here to help you organize, 
-                        manage, and track your DIY volunteering projects from start to finish. Whether you're 
-                        working on a single initiative or juggling multiple volunteer commitments, I'll provide 
-                        you with the tools and strategies to ensure your projects run smoothly and create 
-                        meaningful impact.
-                    </p>
-                    
-                    <div class="features-grid">
-                        <div class="feature-card">
-                            <i class="fas fa-tasks" aria-hidden="true"></i>
-                            <h4>Project Organization</h4>
-                            <p>Structure your volunteer projects with clear goals, timelines, and milestones</p>
-                        </div>
-                        <div class="feature-card">
-                            <i class="fas fa-chart-gantt" aria-hidden="true"></i>
-                            <h4>Progress Tracking</h4>
-                            <p>Monitor your project progress and stay on track with your commitments</p>
-                        </div>
-                        <div class="feature-card">
-                            <i class="fas fa-users" aria-hidden="true"></i>
-                            <h4>Team Coordination</h4>
-                            <p>Collaborate effectively with other volunteers and organization staff</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Chatbot Section -->
-        <section class="chatbot-section">
-            <div class="container">
-                <div class="chatbot-wrapper">
-                    <div class="chatbot-header">
-                        <h3>Start Managing Your Projects</h3>
-                        <p>Chat with Alaster to organize your volunteer projects and optimize your impact!</p>
-                    </div>
-                    
-                    <!-- Placeholder for Flowise Chatbot -->
-                    <div class="chatbot-container">
-                        <div class="chatbot-placeholder">
-                            <div class="placeholder-content">
-                                <i class="fas fa-robot" aria-hidden="true"></i>
-                                <h4>Project Hub Chatbot</h4>
-                                <p>Flowise chatbot will be integrated here</p>
-                                <button class="btn btn-primary" onclick="alert('Chatbot integration coming soon!')">
-                                    <i class="fas fa-comments"></i>
-                                    Start Managing
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <!-- Replace this comment with your Flowise iframe/script -->
-                        <!-- <iframe src="YOUR_FLOWISE_URL" width="100%" height="500" frameborder="0"></iframe> -->
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Project Management Tools Section -->
-        <section class="tools-section">
-            <div class="container">
-                <div class="tools-content">
-                    <h3>🛠️ Project Management Tools</h3>
-                    <div class="tools-grid">
-                        <div class="tool-card">
-                            <i class="fas fa-clipboard-list" aria-hidden="true"></i>
-                            <h4>Project Planning</h4>
-                            <p>Create detailed project plans with objectives, resources, and timelines</p>
-                            <ul>
-                                <li>Goal setting and scope definition</li>
-                                <li>Resource allocation and planning</li>
-                                <li>Timeline and milestone creation</li>
-                            </ul>
-                        </div>
-                        <div class="tool-card">
-                            <i class="fas fa-stopwatch" aria-hidden="true"></i>
-                            <h4>Time Management</h4>
-                            <p>Track time spent on activities and manage your 15-hour commitment</p>
-                            <ul>
-                                <li>Time logging and tracking</li>
-                                <li>Schedule optimization</li>
-                                <li>Deadline management</li>
-                            </ul>
-                        </div>
-                        <div class="tool-card">
-                            <i class="fas fa-chart-bar" aria-hidden="true"></i>
-                            <h4>Impact Measurement</h4>
-                            <p>Measure and document the impact of your volunteer projects</p>
-                            <ul>
-                                <li>Progress monitoring</li>
-                                <li>Impact assessment</li>
-                                <li>Success metrics tracking</li>
-                            </ul>
-                        </div>
-                        <div class="tool-card">
-                            <i class="fas fa-handshake" aria-hidden="true"></i>
-                            <h4>Stakeholder Management</h4>
-                            <p>Manage relationships with organizations, beneficiaries, and team members</p>
-                            <ul>
-                                <li>Communication planning</li>
-                                <li>Relationship building</li>
-                                <li>Feedback collection</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Project Lifecycle Section -->
-        <section class="lifecycle-section">
-            <div class="container">
-                <div class="lifecycle-content">
-                    <h3>🔄 Project Lifecycle</h3>
-                    <div class="lifecycle-steps">
-                        <div class="step-card">
-                            <div class="step-number">1</div>
-                            <h4>Initiation</h4>
-                            <p>Define project goals, identify stakeholders, and establish scope</p>
-                        </div>
-                        <div class="step-card">
-                            <div class="step-number">2</div>
-                            <h4>Planning</h4>
-                            <p>Create detailed plans, allocate resources, and set timelines</p>
-                        </div>
-                        <div class="step-card">
-                            <div class="step-number">3</div>
-                            <h4>Execution</h4>
-                            <p>Implement the project plan and coordinate team activities</p>
-                        </div>
-                        <div class="step-card">
-                            <div class="step-number">4</div>
-                            <h4>Monitoring</h4>
-                            <p>Track progress, manage risks, and adjust plans as needed</p>
-                        </div>
-                        <div class="step-card">
-                            <div class="step-number">5</div>
-                            <h4>Closure</h4>
-                            <p>Complete deliverables, evaluate impact, and document learnings</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>DIY Education Coach</h3>
-                    <p>Empowering Republic Polytechnic students through meaningful volunteering experiences.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="elyiana.html">Activity Planner</a></li>
-                        <li><a href="myu.html">Education Coach</a></li>
-                        <li><a href="https://www.rp.edu.sg" target="_blank" rel="noopener noreferrer">RP Website</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Connect With Us</h3>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/republicpolytechnic" target="_blank" rel="noopener noreferrer" aria-label="Follow RP on Facebook">
-                            <i class="fab fa-facebook" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://www.instagram.com/republicpoly" target="_blank" rel="noopener noreferrer" aria-label="Follow RP on Instagram">
-                            <i class="fab fa-instagram" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/school/republic-polytechnic" target="_blank" rel="noopener noreferrer" aria-label="Follow RP on LinkedIn">
-                            <i class="fab fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Republic Polytechnic. All rights reserved. | Designed with ❤️ for RP students</p>
-            </div>
+        <div class="rp-branding">
+          <span class="rp-text">Republic Polytechnic</span>
         </div>
-    </footer>
-
-    <!-- Floating Chat Widget -->
-    <div id="chat-widget" class="chat-widget">
-        <!-- Chat Toggle Button -->
-        <button id="chat-toggle" class="chat-toggle" aria-label="Open DIY Coach chat">
-            <i class="fas fa-comments" id="chat-icon"></i>
-            <i class="fas fa-times" id="close-icon" style="display: none;"></i>
-            <div class="chat-badge">💬</div>
-        </button>
-        
-        <!-- Chat Box -->
-        <div id="chat-box" class="chat-box">
-            <!-- Chat Header -->
-            <div class="chat-header">
-                <div class="chat-header-content">
-                    <div class="chat-avatar">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <div class="chat-header-text">
-                        <h4>Project Hub 📊</h4>
-                        <span class="chat-status">Online • Ready to organize</span>
-                    </div>
-                </div>
-                <button id="chat-minimize" class="chat-minimize" aria-label="Minimize chat">
-                    <i class="fas fa-minus"></i>
-                </button>
-            </div>
-            
-            <!-- Chat Messages -->
-            <div id="chat-messages" class="chat-messages">
-                <div class="welcome-message">
-                    <div class="message bot-message">
-                        <div class="message-avatar">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="message-content">
-                            <p>Hi! I'm Alaster, your Project Hub manager. I'll help you organize and track your volunteer projects. What project would you like to work on? 📊✨</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Typing Indicator -->
-            <div id="typing-indicator" class="typing-indicator" style="display: none;">
-                <div class="message bot-message">
-                    <div class="message-avatar">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="message-content">
-                        <div class="typing-dots">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Chat Input -->
-            <div class="chat-input-container">
-                <form id="chat-form" class="chat-form">
-                    <div class="chat-input-wrapper">
-                        <textarea 
-                            id="chat-input" 
-                            class="chat-input" 
-                            placeholder="Ask about project management..."
-                            rows="1"
-                            maxlength="1000"></textarea>
-                        <button type="submit" id="chat-send" class="chat-send" aria-label="Send message">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </div>
-                </form>
-                <div class="chat-footer">
-                    <small>Powered by Flowise • Project Hub</small>
-                </div>
-            </div>
+      </div>
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link" aria-label="Home">
+            <i class="fas fa-home" aria-hidden="true"></i>
+            <span>Home</span>
+          </a>
+          <a href="elyiana.html" class="nav-link" aria-label="Activity Planner">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            <span>Activity Planner</span>
+          </a>
+          <a href="myu.html" class="nav-link" aria-label="Education Coach">
+            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+            <span>Education Coach</span>
+          </a>
+          <a href="alaster.html" class="nav-link active" aria-label="Project Hub">
+            <i class="fas fa-project-diagram" aria-hidden="true"></i>
+            <span>Project Hub</span>
+          </a>
+          <a href="weiqiang.html" class="nav-link" aria-label="Reflection Coach">
+            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+            <span>Reflection Coach</span>
+          </a>
+          <a href="edlyana.html" class="nav-link" aria-label="Beneficiary Finder">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <span>Beneficiary Finder</span>
+          </a>
         </div>
+        <div class="nav-actions">
+          <button class="nav-btn btn btn-primary" onclick="toggleChat()" aria-label="Open DIY Coach chat">
+            <i class="fas fa-robot" aria-hidden="true"></i>
+            <span>Start Coaching</span>
+          </button>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </button>
+        </div>
+      </nav>
     </div>
+  </header>
 
-    <!-- Custom JavaScript -->
-    <script src="js/app.js"></script>
+  <main class="main" role="main">
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header-content">
+          <div class="page-icon">
+            <i class="fas fa-project-diagram" aria-hidden="true"></i>
+          </div>
+          <h2>Project Hub</h2>
+          <p class="page-subtitle">Manage, track, and optimize your DIY volunteering projects for maximum impact</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="description-section">
+      <div class="container">
+        <div class="description-content">
+          <h3>Meet Your Project Management Guide 📊</h3>
+          <p>Hey there! I'm Alaster, your Project Hub specialist. I'm here to help you organize, manage, and track your DIY volunteering projects from start to finish. Whether you're working on a single initiative or juggling multiple volunteer commitments, I'll provide you with the tools and strategies to ensure your projects run smoothly and create meaningful impact.</p>
+          <div class="features-grid">
+            <div class="feature-card">
+              <i class="fas fa-tasks" aria-hidden="true"></i>
+              <h4>Project Organization</h4>
+              <p>Structure your volunteer projects with clear goals, timelines, and milestones</p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-chart-gantt" aria-hidden="true"></i>
+              <h4>Progress Tracking</h4>
+              <p>Monitor your project progress and stay on track with your commitments</p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-users" aria-hidden="true"></i>
+              <h4>Team Coordination</h4>
+              <p>Collaborate effectively with other volunteers and organization staff</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chatbot-section">
+      <div class="container">
+        <div class="chatbot-wrapper">
+          <div class="chatbot-header">
+            <h3>Start Managing Your Projects</h3>
+            <p>Chat with Alaster to organize your volunteer projects and optimize your impact!</p>
+          </div>
+          <div class="chatbot-container" id="flowise-embed-container"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools-section">
+      <div class="container">
+        <div class="tools-content">
+          <h3>🛠️ Project Management Tools</h3>
+          <div class="tools-grid">
+            <div class="tool-card">
+              <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+              <h4>Project Planning</h4>
+              <p>Create detailed project plans with objectives, resources, and timelines</p>
+              <ul>
+                <li>Goal setting and scope definition</li>
+                <li>Resource allocation and planning</li>
+                <li>Timeline and milestone creation</li>
+              </ul>
+            </div>
+            <div class="tool-card">
+              <i class="fas fa-stopwatch" aria-hidden="true"></i>
+              <h4>Time Management</h4>
+              <p>Track time spent on activities and manage your 15-hour commitment</p>
+              <ul>
+                <li>Time logging and tracking</li>
+                <li>Schedule optimization</li>
+                <li>Deadline management</li>
+              </ul>
+            </div>
+            <div class="tool-card">
+              <i class="fas fa-chart-bar" aria-hidden="true"></i>
+              <h4>Impact Measurement</h4>
+              <p>Measure and document the impact of your volunteer projects</p>
+              <ul>
+                <li>Progress monitoring</li>
+                <li>Impact assessment</li>
+                <li>Success metrics tracking</li>
+              </ul>
+            </div>
+            <div class="tool-card">
+              <i class="fas fa-handshake" aria-hidden="true"></i>
+              <h4>Stakeholder Management</h4>
+              <p>Manage relationships with organizations, beneficiaries, and team members</p>
+              <ul>
+                <li>Communication planning</li>
+                <li>Relationship building</li>
+                <li>Feedback collection</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lifecycle-section">
+      <div class="container">
+        <div class="lifecycle-content">
+          <h3>🔄 Project Lifecycle</h3>
+          <div class="lifecycle-steps">
+            <div class="step-card">
+              <div class="step-number">1</div>
+              <h4>Initiation</h4>
+              <p>Define project goals, identify stakeholders, and establish scope</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">2</div>
+              <h4>Planning</h4>
+              <p>Create detailed plans, allocate resources, and set timelines</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">3</div>
+              <h4>Execution</h4>
+              <p>Implement the project plan and coordinate team activities</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">4</div>
+              <h4>Monitoring</h4>
+              <p>Track progress, manage risks, and adjust plans as needed</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">5</div>
+              <h4>Closure</h4>
+              <p>Complete deliverables, evaluate impact, and document learnings</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>DIY Education Coach</h3>
+          <p>Empowering Republic Polytechnic students through meaningful volunteering experiences.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="elyiana.html">Activity Planner</a></li>
+            <li><a href="myu.html">Education Coach</a></li>
+            <li><a href="https://www.rp.edu.sg" target="_blank" rel="noopener noreferrer">RP Website</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="https://www.facebook.com/republicpolytechnic" target="_blank" rel="noopener noreferrer" aria-label="Follow RP on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/republicpoly" target="_blank" rel="noopener noreferrer" aria-label="Follow RP on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/school/republic-polytechnic" target="_blank" rel="noopener noreferrer" aria-label="Follow RP on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Republic Polytechnic. All rights reserved. | Designed with ❤️ for RP students</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script type="module">
+    import Chatbot from 'https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js';
+    Chatbot.init({
+      chatflowid: 'f817fb56-27c8-42d1-8b57-037d67738413',
+      apiHost: 'https://alasterr-flowiseai.hf.space',
+      theme: {
+        customCSS: `
+          .flowise-chatbot-button {
+            position: fixed !important;
+            z-index: 42424242 !important;
+            width: 48px !important;
+            height: 48px !important;
+            background-color: rgb(59, 129, 246) !important;
+            right: 20px !important;
+            bottom: 20px !important;
+            cursor: pointer !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            border-radius: 9999px !important;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06) !important;
+            transition: transform .2s !important;
+            animation: fadeIn .5s ease-in-out !important;
+          }
+          .flowise-chatbot-button:hover {
+            transform: scale(1.10) !important;
+          }
+          .flowise-chatbot-button:active {
+            transform: scale(0.95) !important;
+          }
+          .flowise-chatbot-button svg {
+            fill: #fff !important;
+            width: 28px !important;
+            height: 28px !important;
+          }
+        `
+      }
+    });
+  </script>
 </body>
 </html>
