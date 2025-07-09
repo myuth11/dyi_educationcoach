@@ -644,6 +644,12 @@ function highlightChatbotSection() {
  */
 function initializeScrollNavigation() {
     const header = document.querySelector('.header');
+    
+    if (!header) {
+        console.warn('Header element not found for scroll navigation');
+        return;
+    }
+    
     let lastScrollY = window.scrollY;
     let ticking = false;
 
@@ -671,8 +677,21 @@ function initializeScrollNavigation() {
     // Listen for scroll events with throttling
     window.addEventListener('scroll', requestTick, { passive: true });
     
+    // Also add a direct scroll listener as fallback
+    window.addEventListener('scroll', function() {
+        const scrollY = window.scrollY;
+        if (scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }, { passive: true });
+    
     // Initialize state
     updateNavigationState();
+    
+    // Debug info
+    console.log('Scroll navigation initialized');
 }
 
 // ===== FLOATING CHAT WIDGET =====
