@@ -236,7 +236,7 @@ a:focus {
 .header {
   background: var(--navbar-midnight);
   color: white;
-  padding: var(--spacing-md) 0;
+  padding: 0.5rem 0;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -248,17 +248,17 @@ a:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: 0.25rem;
 }
 
 .logo-section {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: 0.5rem;
 }
 
 .logo-section i {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: var(--accent-lime);
   transition: transform var(--transition-bounce);
 }
@@ -270,7 +270,7 @@ a:focus {
 .logo-section h1 {
   color: white;
   margin: 0;
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
   font-weight: var(--font-weight-extrabold);
   background: linear-gradient(135deg, white, var(--accent-lime));
   -webkit-background-clip: text;
@@ -283,7 +283,7 @@ a:focus {
 }
 
 .rp-text {
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: var(--font-weight-medium);
   color: rgba(255, 255, 255, 0.9);
   font-family: var(--font-heading);
@@ -293,13 +293,13 @@ a:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: var(--spacing-lg);
+  gap: 0.75rem;
   flex-wrap: wrap;
 }
 
 .nav-menu {
   display: flex;
-  gap: var(--spacing-sm);
+  gap: 0.25rem;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -307,17 +307,18 @@ a:focus {
 .nav-link {
   display: flex;
   align-items: center;
-  gap: var(--spacing-xs);
-  padding: var(--spacing-xs) var(--spacing-sm);
-  border-radius: var(--radius-full);
+  gap: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--radius-lg);
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   font-family: var(--font-heading);
   font-weight: var(--font-weight-medium);
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   transition: all var(--transition-fast);
   border: 1px solid transparent;
-  min-height: 40px;
+  min-height: 28px;
+  white-space: nowrap;
 }
 
 .nav-link:hover, .nav-link:focus {
@@ -334,12 +335,13 @@ a:focus {
 }
 
 .nav-link i {
-  font-size: 1rem;
+  font-size: 0.8rem;
+  min-width: 12px;
 }
 
 .nav-actions {
   display: flex;
-  gap: var(--spacing-sm);
+  gap: 0.25rem;
   align-items: center;
 }
 
@@ -992,23 +994,9 @@ a:focus {
     padding: 0 var(--spacing-sm);
   }
   
-  .header {
-    padding: var(--spacing-sm) 0;
-  }
-  
-  .header-content {
-    flex-direction: column;
-    gap: var(--spacing-sm);
-    text-align: center;
-  }
-  
   .nav {
     flex-wrap: wrap;
     justify-content: center;
-  }
-  
-  .logo-section h1 {
-    font-size: clamp(1.25rem, 4vw, 1.5rem);
   }
   
   .features-grid {
@@ -1058,8 +1046,12 @@ a:focus {
 
 /* Responsive Navigation */
 @media (max-width: 1024px) {
+  .nav {
+    gap: 0.5rem;
+  }
+  
   .nav-menu {
-    gap: var(--spacing-xs);
+    gap: 0.125rem;
   }
   
   .nav-link span {
@@ -1067,49 +1059,138 @@ a:focus {
   }
   
   .nav-link {
-    padding: var(--spacing-xs);
-    min-width: 40px;
+    padding: 0.375rem;
+    min-width: 28px;
     justify-content: center;
+    font-size: 0.8rem;
+  }
+  
+  .nav-link i {
+    margin: 0;
   }
 }
 
 @media (max-width: 768px) {
+  .header {
+    padding: 0.25rem 0;
+  }
+  
+  .header-content {
+    margin-bottom: 0.125rem;
+  }
+  
   .nav {
-    flex-direction: column;
-    gap: var(--spacing-md);
+    gap: 0.25rem;
   }
   
   .nav-menu {
-    order: 2;
-    justify-content: center;
+    gap: 1px;
+  }
+  
+  .nav-link {
+    padding: 0.25rem;
+    min-width: 24px;
+    font-size: 0.7rem;
+  }
+  
+  .nav-link i {
+    font-size: 0.7rem;
+  }
+  
+  .logo-section h1 {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+  
+  .logo-section i {
+    font-size: 1.2rem;
+  }
+  
+  .rp-text {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 1px;
+  }
+  
+  .nav {
     width: 100%;
+    justify-content: space-between;
+  }
+  
+  .nav-menu {
+    gap: 1px;
+    justify-content: space-evenly;
+    flex: 1;
+  }
+  
+  .nav-link {
+    min-width: 40px;
+    flex: 1;
+    max-width: none;
+    padding: 0.25rem 0.125rem;
+    font-size: 0.65rem;
+  }
+  
+  .nav-link i {
+    font-size: 0.65rem;
   }
   
   .nav-actions {
-    order: 1;
-    justify-content: center;
+    gap: 1px;
+  }
+  
+  .nav-btn {
+    padding: 0.25rem;
+    min-width: 24px;
+    font-size: 0.65rem;
   }
   
   .nav-btn span {
     display: none;
   }
-  
-  .nav-btn {
-    padding: var(--spacing-sm);
-    min-width: 44px;
-    justify-content: center;
-  }
 }
 
-@media (max-width: 480px) {
-  .nav-menu {
-    flex-wrap: wrap;
-    gap: var(--spacing-xs);
+/* ===== SCROLL-RESPONSIVE HEADER STYLES ===== */
+.header.scrolled {
+  padding: 0.25rem 0;
+  backdrop-filter: blur(15px);
+  background: rgba(26, 28, 64, 0.95);
+}
+
+.header.scrolled .header-content {
+  margin-bottom: 0.125rem;
+}
+
+.header.scrolled .logo-section h1 {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.header.scrolled .logo-section i {
+  font-size: 1.2rem;
+}
+
+.header.scrolled .nav-link {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.7rem;
+}
+
+.header.scrolled .nav-link i {
+  font-size: 0.7rem;
+}
+
+@media (max-width: 768px) {
+  .header.scrolled {
+    padding: 0.125rem 0;
   }
   
-  .nav-link {
-    flex: 1;
-    min-width: 60px;
+  .header.scrolled .nav-link {
+    padding: 0.125rem 0.25rem;
+    font-size: 0.65rem;
   }
 }
 
