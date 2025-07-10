@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta name="description" content="Reflection Coach - Reflect on your DIY volunteering experiences with Wei Qiang's guidance">
     <meta name="author" content="Republic Polytechnic">
     <title>Reflection Coach | DIY Education Coach</title>
@@ -14,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/weiqiang.css">
+    <link rel="stylesheet" href="css/weiqiang.css?v=4.1">
 </head>
 <body>
     <!-- Header Section -->
@@ -25,8 +28,10 @@
                     <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                     <h1>DIY Education Coach</h1>
                 </div>
-                <div class="rp-branding">
+                <div class="rp-branding" style="display: flex;">
+                    <img src="images/pixelated_voluntter_logo.svg" alt="Republic Polytechnic Logo" class="rp-logo" width="30" height="30" style="margin-right: var(--spacing-xs);">
                     <span class="rp-text">Republic Polytechnic</span>
+
                 </div>
             </div>
             <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -74,7 +79,7 @@
                     <div class="page-icon">
                         <i class="fas fa-lightbulb" aria-hidden="true"></i>
                     </div>
-                    <h2>Volunteering Portfolio & Reflection Builder</h2>
+                    <h2>Volunteering Portfolio & Reflection Coach</h2>
                     <p class="page-subtitle">Transform your volunteering experiences into meaningful insights and personal growth</p>
                 </div>
             </div>
@@ -84,14 +89,88 @@
         <section class="description-section">
             <div class="container">
                 <div class="description-content">
-                    <h3>Meet Your Reflection Guide 💭</h3>
+                    <h3>Meet Your Portfolio & Reflection Coach 💭</h3>
                     <p>
-                        Hello! I'm Wei Qiang, your dedicated Reflection & Portfolio Coach. I believe that true learning 
+                        Hello! I'm Wei Qiang, your dedicated Portfolio & Reflection Coach. I believe that true learning 
                         happens when we take time to reflect on our experiences. I'm here to guide you through 
-                        thoughtful reflection & Portfolio development on your DIY volunteering journey, helping you extract valuable 
+                        thoughtful reflection & portfolio development on your DIY volunteering journey, helping you extract valuable 
                         insights, celebrate your growth, identify areas for future development and build a compelling portfolio. Together, 
                         we'll transform your experiences into lasting wisdom.
                     </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- AI Chatbot Section -->
+        <section class="chatbot-section">
+            <div class="container">
+                <div class="chatbot-header">
+                    <div class="chatbot-title">
+                        <div class="chatbot-icon">
+                            <i class="fas fa-robot" aria-hidden="true"></i>
+                        </div>
+                        <div class="chatbot-title-text">
+                            <h3>Volunteering Portfolio & Reflection Builder</h3>
+                            <p class="chatbot-tagline">Build your volunteering portfolio and reflect on your experiences with the help of AI.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chatbot-container">
+                    <div class="chat-window" id="chatWindow">
+                        <div class="chat-messages" id="chatMessages">
+                            <!-- Welcome message -->
+                            <div class="message bot-message">
+                                <div class="message-avatar">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="message-content">
+                                    <p>Hello! I'm your AI Reflection & Portfolio Coach. I'm here to help you reflect on your volunteering experiences and build a compelling portfolio. What would you like to explore today?</p>
+                                    <div class="message-suggestions">
+                                        <button class="suggestion-btn" onclick="sendSuggestion('How do I start building my volunteering portfolio?')">📋 Build Portfolio</button>
+                                        <button class="suggestion-btn" onclick="sendSuggestion('Help me reflect on my recent volunteering experience')">🤔 Reflect Experience</button>
+                                        <button class="suggestion-btn" onclick="sendSuggestion('What skills did I develop through volunteering?')">💡 Skills Development</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-loading" id="chatLoading" style="display: none;">
+                            <div class="message bot-message">
+                                <div class="message-avatar">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="message-content">
+                                    <div class="typing-indicator">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input-container">
+                        <div class="chat-input-wrapper">
+                            <textarea 
+                                id="chatInput" 
+                                class="chat-input" 
+                                placeholder="Type your message about volunteering, portfolio building, or reflection..."
+                                rows="1"
+                                maxlength="1000"
+                            ></textarea>
+                            <button id="sendButton" class="chat-send-btn" onclick="sendMessage()">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="chat-input-footer">
+                            <small class="chat-disclaimer">
+                                <i class="fas fa-info-circle"></i>
+                                AI responses are for guidance purposes. Your reflection and portfolio development journey is unique to you.
+                            </small>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
