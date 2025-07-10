@@ -1466,6 +1466,32 @@ a:focus {
   background: var(--cyan-hover);
 }
 
+.chat-messages {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap; /* wraps long unbroken lines */
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: #f9f9f9;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Ensure pre/code blocks don't overflow */
+.chat-messages pre, 
+.chat-messages code {
+    white-space: pre-wrap !important;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    font-size: 0.9rem;
+    background: #f0f0f0;
+    padding: 0.4rem;
+    border-radius: 4px;
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
 /* Message Styles */
 .message {
   display: flex;
