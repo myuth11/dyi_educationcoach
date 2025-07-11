@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/weiqiang.css?v=4.1">
+    <link rel="stylesheet" href="css/weiqiang.css?v=4.3">
 </head>
 <body>
     <!-- Header Section -->
@@ -54,7 +54,7 @@
                     </a>
                     <a href="weiqiang.html" class="nav-link active" aria-label="Reflection Coach">
                         <i class="fas fa-lightbulb" aria-hidden="true"></i>
-                        <span>Reflection Coach</span>
+                        <span>Reflection & Portfolio Coach</span>
                     </a>
                     <a href="edlyana.html" class="nav-link" aria-label="Beneficiary Finder">
                         <i class="fas fa-search" aria-hidden="true"></i>
@@ -169,6 +169,150 @@
                                 <i class="fas fa-info-circle"></i>
                                 AI responses are for guidance purposes. Your reflection and portfolio development journey is unique to you.
                             </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Additional Information and Resources Section -->
+        <section class="resources-section">
+            <div class="container">
+                <div class="resources-header">
+                    <div class="resources-title">
+                        <div class="resources-icon">
+                            <i class="fas fa-book-open" aria-hidden="true"></i>
+                        </div>
+                        <div class="resources-title-text">
+                            <h3>Additional Information & Resources</h3>
+                            <p class="resources-tagline">Comprehensive guides and frameworks for effective reflection and portfolio development</p>
+                        </div>
+                    </div>
+                    <button class="resources-toggle" onclick="toggleResources()" aria-label="Toggle resources section">
+                        <i class="fas fa-chevron-down" id="resourcesToggleIcon"></i>
+                    </button>
+                </div>
+                
+                <div class="resources-content" id="resourcesContent" style="display: none;">
+                    <div class="resources-grid">
+                        <!-- Portfolio Framework -->
+                        <div class="resource-card">
+                            <div class="resource-card-header">
+                                <div class="resource-icon">
+                                    <i class="fas fa-folder-open"></i>
+                                </div>
+                                <h4>Portfolio Framework</h4>
+                            </div>
+                            <div class="resource-card-content">
+                                <p>Structured approach to building your volunteering portfolio:</p>
+                                <ul class="resource-list">
+                                    <li><strong>Experience Documentation:</strong> Record key activities, roles, and responsibilities</li>
+                                    <li><strong>Evidence Collection:</strong> Gather certificates, photos, testimonials, and outcomes</li>
+                                    <li><strong>Impact Measurement:</strong> Quantify your contributions and achievements</li>
+                                    <li><strong>Skill Mapping:</strong> Identify transferable skills gained through volunteering</li>
+                                    <li><strong>Story Development:</strong> Create compelling narratives around your experiences</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Reflection Framework -->
+                        <div class="resource-card">
+                            <div class="resource-card-header">
+                                <div class="resource-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <h4>Reflection Framework</h4>
+                            </div>
+                            <div class="resource-card-content">
+                                <p>Systematic approach to meaningful reflection:</p>
+                                <ul class="resource-list">
+                                    <li><strong>STAR Method:</strong> Situation, Task, Action, Result analysis</li>
+                                    <li><strong>Gibbs' Reflective Cycle:</strong> Description, feelings, evaluation, analysis, conclusion, action plan</li>
+                                    <li><strong>What, So What, Now What:</strong> Simple three-step reflection process</li>
+                                    <li><strong>Critical Incident Analysis:</strong> Deep dive into significant moments</li>
+                                    <li><strong>Learning Logs:</strong> Regular documentation of insights and growth</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Portfolio Benefits -->
+                        <div class="resource-card">
+                            <div class="resource-card-header">
+                                <div class="resource-icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <h4>Portfolio Benefits</h4>
+                            </div>
+                            <div class="resource-card-content">
+                                <p>Why building a portfolio matters:</p>
+                                <ul class="resource-list">
+                                    <li><strong>Career Advancement:</strong> Demonstrate skills and experience to employers</li>
+                                    <li><strong>Personal Growth:</strong> Track your development and achievements over time</li>
+                                    <li><strong>Scholarship Applications:</strong> Strengthen university and scholarship applications</li>
+                                    <li><strong>Networking:</strong> Share your experiences with potential mentors and collaborators</li>
+                                    <li><strong>Self-Awareness:</strong> Better understand your strengths and areas for growth</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Reflection Benefits -->
+                        <div class="resource-card">
+                            <div class="resource-card-header">
+                                <div class="resource-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h4>Reflection Benefits</h4>
+                            </div>
+                            <div class="resource-card-content">
+                                <p>The power of reflective practice:</p>
+                                <ul class="resource-list">
+                                    <li><strong>Enhanced Learning:</strong> Deeper understanding of experiences and lessons learned</li>
+                                    <li><strong>Improved Decision-Making:</strong> Better judgment through analyzed past experiences</li>
+                                    <li><strong>Increased Self-Confidence:</strong> Recognition of personal achievements and growth</li>
+                                    <li><strong>Emotional Intelligence:</strong> Better understanding of emotions and reactions</li>
+                                    <li><strong>Continuous Improvement:</strong> Identification of areas for future development</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Tips Section -->
+                    <div class="quick-tips-section">
+                        <div class="quick-tips-header">
+                            <div class="quick-tips-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4>Quick Tips for Success</h4>
+                        </div>
+                        <div class="quick-tips-grid">
+                            <div class="tip-card">
+                                <div class="tip-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <h5>Regular Updates</h5>
+                                <p>Update your portfolio and reflect on experiences regularly, not just at the end of projects.</p>
+                            </div>
+                            <div class="tip-card">
+                                <div class="tip-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h5>Seek Feedback</h5>
+                                <p>Get input from supervisors, peers, and beneficiaries to gain different perspectives.</p>
+                            </div>
+                            <div class="tip-card">
+                                <div class="tip-icon">
+                                    <i class="fas fa-camera"></i>
+                                </div>
+                                <h5>Document Everything</h5>
+                                <p>Take photos, save emails, and collect testimonials as evidence of your impact.</p>
+                            </div>
+                            <div class="tip-card">
+                                <div class="tip-icon">
+                                    <i class="fas fa-bullseye"></i>
+                                </div>
+                                <h5>Set Goals</h5>
+                                <p>Use reflection to set specific, measurable goals for your next volunteering experiences.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

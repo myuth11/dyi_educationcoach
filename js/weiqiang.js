@@ -1746,3 +1746,68 @@ function showFeedbackToast(message, type = 'success') {
         }, 300);
     }, 3000);
 }
+
+/**
+ * Toggle resources section visibility with smooth animations
+ */
+function toggleResources() {
+    console.log('🔧 toggleResources called');
+    
+    const resourcesContent = document.getElementById('resourcesContent');
+    const toggleIcon = document.getElementById('resourcesToggleIcon');
+    const toggleButton = document.querySelector('.resources-toggle');
+    
+    if (!resourcesContent || !toggleIcon || !toggleButton) {
+        console.error('🔧 Resources elements not found');
+        return;
+    }
+    
+    const isVisible = resourcesContent.classList.contains('show');
+    
+    if (isVisible) {
+        // Hide resources with animation
+        resourcesContent.classList.remove('show');
+        toggleIcon.className = 'fas fa-chevron-down';
+        toggleButton.classList.remove('active');
+        toggleButton.setAttribute('aria-label', 'Show additional resources');
+        
+        // Wait for animation to complete before hiding
+        setTimeout(() => {
+            resourcesContent.style.display = 'none';
+        }, 600);
+    } else {
+        // Show resources with animation
+        resourcesContent.style.display = 'block';
+        // Force reflow to ensure display change is applied
+        resourcesContent.offsetHeight;
+        
+        setTimeout(() => {
+            resourcesContent.classList.add('show');
+            toggleIcon.className = 'fas fa-chevron-up';
+            toggleButton.classList.add('active');
+            toggleButton.setAttribute('aria-label', 'Hide additional resources');
+            
+            // Smooth scroll to the resources section after animation starts
+            setTimeout(() => {
+                resourcesContent.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'nearest' 
+                });
+            }, 300);
+        }, 50);
+    }
+    
+    console.log('🔧 Resources toggled:', !isVisible ? 'shown' : 'hidden');
+}
+
+// Add click handler for the entire resources header
+document.addEventListener('DOMContentLoaded', function() {
+    // ...existing code...
+    
+    // Initialize resources toggle
+    const resourcesHeader = document.querySelector('.resources-header');
+    if (resourcesHeader) {
+        resourcesHeader.addEventListener('click', toggleResources);
+        console.log('🔧 Resources header click handler initialized');
+    }
+});
