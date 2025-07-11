@@ -57,10 +57,6 @@
                     </a>
                 </div>
                 <div class="nav-actions">
-                    <button class="nav-btn btn btn-primary" onclick="toggleChat()" aria-label="Open DYL Coach chat">
-                        <i class="fas fa-robot" aria-hidden="true"></i>
-                        <span>Start Coaching</span>
-                    </button>
                     <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
                         <i class="fas fa-moon" aria-hidden="true"></i>
                     </button>
@@ -95,7 +91,6 @@
                         Whether you're looking for weekend opportunities, skill-building experiences, or community 
                         impact projects, I'll guide you every step of the way!
                     </p>
-                    
                     <div class="features-grid">
                         <div class="feature-card">
                             <i class="fas fa-search" aria-hidden="true"></i>
@@ -118,30 +113,16 @@
         </section>
 
         <!-- Chatbot Section -->
-        <section class="chatbot-section">
+        <section class="chatbot-section" style="background: #f7f9fc; padding: 2.5rem 0 2rem 0;">
             <div class="container">
-                <div class="chatbot-wrapper">
-                    <div class="chatbot-header">
-                        <h3>Start Planning Your Activities</h3>
-                        <p>Chat with Elyiana to get personalized activity recommendations and create your volunteering schedule!</p>
+                <div class="chatbot-card" style="max-width: 1100px; width: 90vw; margin: 0 auto; background: #1A237E; border-radius: 18px; box-shadow: 0 4px 24px rgba(26,35,126,0.18); padding: 2.2rem 2.2rem 1.7rem 2.2rem; display: flex; flex-direction: column; align-items: center;">
+                    <div class="chatbot-header" style="width: 100%; text-align: center; margin-bottom: 1.1rem;">
+                        <h3 style="color: #B6F000; font-weight: 700; font-size: 1.45rem; margin-bottom: 0.3rem; letter-spacing: 0.5px;">Start Planning Your Activities</h3>
+                        <div style="width: 54px; height: 3px; background: #B6F000; border-radius: 2px; margin: 0 auto 0.7rem auto;"></div>
+                        <p style="color: #e0e7ff; font-size: 1.12rem;">Chat with Elyiana to get personalized activity recommendations and create your volunteering schedule!</p>
                     </div>
-                    
-                    <!-- Placeholder for Flowise Chatbot -->
-                    <div class="chatbot-container">
-                        <div class="chatbot-placeholder">
-                            <div class="placeholder-content">
-                                <i class="fas fa-robot" aria-hidden="true"></i>
-                                <h4>Activity Planner Chatbot</h4>
-                                <p>Flowise chatbot will be integrated here</p>
-                                <button class="btn btn-primary" onclick="alert('Chatbot integration coming soon!')">
-                                    <i class="fas fa-comments"></i>
-                                    Start Planning
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <!-- Replace this comment with your Flowise iframe/script -->
-                        <!-- <iframe src="YOUR_FLOWISE_URL" width="100%" height="500" frameborder="0"></iframe> -->
+                    <div class="chatbot-embed-outer" style="width: 100%; height: 80vh; min-height: 500px; max-height: 900px; background: #232e5c; border-radius: 14px; box-shadow: 0 2px 12px rgba(26,35,126,0.13); border: 1.5px solid #2e3970; padding: 2.5rem 0.7rem 0.7rem 0.7rem; display: flex; flex-direction: column; align-items: stretch; overflow-x: hidden;">
+                        <flowise-fullchatbot style="width: 100%; height: 100%; min-height: 400px; max-height: 820px; border-radius: 12px; overflow: visible; background: #232e5c;"></flowise-fullchatbot>
                     </div>
                 </div>
             </div>
@@ -217,86 +198,83 @@
         </div>
     </footer>
 
-    <!-- Floating Chat Widget -->
-    <div id="chat-widget" class="chat-widget">
-        <!-- Chat Toggle Button -->
-        <button id="chat-toggle" class="chat-toggle" aria-label="Open DYL Coach chat">
-            <i class="fas fa-comments" id="chat-icon"></i>
-            <i class="fas fa-times" id="close-icon" style="display: none;"></i>
-            <div class="chat-badge">💬</div>
-        </button>
-        
-        <!-- Chat Box -->
-        <div id="chat-box" class="chat-box">
-            <!-- Chat Header -->
-            <div class="chat-header">
-                <div class="chat-header-content">
-                    <div class="chat-avatar">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <div class="chat-header-text">
-                        <h4>Activity Planner 📅</h4>
-                        <span class="chat-status">Online • Ready to plan</span>
-                    </div>
-                </div>
-                <button id="chat-minimize" class="chat-minimize" aria-label="Minimize chat">
-                    <i class="fas fa-minus"></i>
-                </button>
-            </div>
-            
-            <!-- Chat Messages -->
-            <div id="chat-messages" class="chat-messages">
-                <div class="welcome-message">
-                    <div class="message bot-message">
-                        <div class="message-avatar">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="message-content">
-                            <p>Hi! I'm Elyiana, your Activity Planner. I'll help you discover and plan amazing volunteering activities. What kind of activities interest you? 📅✨</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Typing Indicator -->
-            <div id="typing-indicator" class="typing-indicator" style="display: none;">
-                <div class="message bot-message">
-                    <div class="message-avatar">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="message-content">
-                        <div class="typing-dots">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Chat Input -->
-            <div class="chat-input-container">
-                <form id="chat-form" class="chat-form">
-                    <div class="chat-input-wrapper">
-                        <textarea 
-                            id="chat-input" 
-                            class="chat-input" 
-                            placeholder="Ask about volunteering activities..."
-                            rows="1"
-                            maxlength="1000"></textarea>
-                        <button type="submit" id="chat-send" class="chat-send" aria-label="Send message">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </div>
-                </form>
-                <div class="chat-footer">
-                    <small>Powered by Flowise • Activity Planner</small>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Custom JavaScript -->
     <script src="js/app.js"></script>
+    <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+        Chatbot.initFull({
+            chatflowid: "e3e3f042-b6bc-4932-b8fc-ebbbf2a01da2",
+            apiHost: "https://elyiana-singapling.hf.space",
+        })
+    </script>
+    <style>
+    /* Responsive container and layout */
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.2rem;
+        box-sizing: border-box;
+    }
+    .features-grid, .tips-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+    .feature-card, .tip-card {
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 2px 10px rgba(26,35,126,0.07);
+        padding: 1.2rem 1rem;
+        flex: 1 1 220px;
+        max-width: 320px;
+        min-width: 180px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .feature-card i, .tip-card i {
+        font-size: 1.7rem;
+        margin-bottom: 0.7rem;
+        color: #B6F000;
+    }
+    .feature-card h4, .tip-card h4 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+        color: #1A237E;
+    }
+    .feature-card p, .tip-card p {
+        font-size: 0.98rem;
+        color: #3b4a6b;
+    }
+    /* Responsive chatbot card and embed */
+    .chatbot-card { max-width: 1100px !important; width: 90vw !important; padding: 2.5rem 2.5rem 2rem 2.5rem !important; }
+    .chatbot-header h3 { font-size: 1.45rem !important; }
+    .chatbot-header p { font-size: 1.12rem !important; }
+    .chatbot-embed-outer { height: 80vh !important; min-height: 500px !important; max-height: 900px !important; padding: 2.5rem 0.7rem 0.7rem 0.7rem !important; }
+    flowise-fullchatbot { min-height: 400px !important; max-height: 820px !important; }
+    @media (max-width: 1100px) { .chatbot-card { max-width: 98vw !important; } }
+    @media (max-width: 900px) {
+        .container { max-width: 98vw; padding: 0 0.5rem; }
+        .chatbot-card { max-width: 98vw !important; }
+    }
+    @media (max-width: 700px) {
+        .features-grid, .tips-grid { gap: 1rem; }
+        .feature-card, .tip-card { max-width: 98vw; min-width: 120px; padding: 1rem 0.5rem; }
+        .footer-content { flex-direction: column; gap: 0.5rem; }
+        .footer-section { margin-bottom: 0.7rem; }
+        .chatbot-card { padding: 1.2rem 0.3rem 1rem 0.3rem !important; }
+        .chatbot-embed-outer { min-height: 340px !important; max-height: 480px !important; padding: 0.2rem !important; }
+        flowise-fullchatbot { min-height: 220px !important; max-height: 340px !important; }
+    }
+    @media (max-width: 400px) {
+        .chatbot-header h3 { font-size: 1rem !important; }
+        .chatbot-header p { font-size: 0.9rem !important; }
+        .feature-card h4, .tip-card h4 { font-size: 0.98rem; }
+    }
+    </style>
 </body>
 </html>
