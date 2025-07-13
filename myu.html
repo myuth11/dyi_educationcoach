@@ -308,5 +308,14 @@
 
     <!-- Custom JavaScript -->
     <script src="js/app.js"></script>
+    
+    <!-- Flowise Chatbot Integration -->
+    <script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "7cab6fc9-44b7-4076-bbf3-d72a3a5a4864",
+        apiHost: "https://myuth-flowise.hf.space",
+    })
+</script>
 </body>
 </html>
