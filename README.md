@@ -1,10 +1,10 @@
-# DIY Education Coach
+# DYI Education Coach
 
 A student-friendly website for Republic Polytechnic students to plan, prepare, and reflect on their 15-hour DIY volunteering journey.
 
 ## 🎯 Project Overview
 
-The DIY Education Coach is designed to empower RP students aged 17-22 from all diplomas with an interactive, AI-powered coaching experience. The website provides guidance through every stage of the volunteering process while maintaining Republic Polytechnic's brand identity and values.
+The DYI Volunteering Assistant is designed to empower RP students aged 17 and above, from all diplomas with an interactive, AI-powered coaching experience. The website provides guidance through every stage of the volunteering process while maintaining Republic Polytechnic's brand identity and values.
 
 ## ✨ Features
 
