@@ -1,321 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Education Coach - Get personalized guidance for your DYLvolunteering journey with Myu">
-    <meta name="author" content="Republic Polytechnic">
-    <title>Education Coach | DYL Volunteering Assistant</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Education Coach - Get personalized guidance for your DYLvolunteering journey with Myu" />
+  <meta name="author" content="Republic Polytechnic" />
+  <title>Education Coach | DYL Volunteering Assistant</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .myu-chatbox {
+      margin-top: 2rem;
+      background: #f9fafb;
+      padding: 1rem;
+      border-radius: 1rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .myu-chat-messages {
+      min-height: 120px;
+      max-height: 300px;
+      overflow-y: auto;
+      padding: 0.5rem 0;
+      margin-bottom: 1rem;
+    }
+    .myu-chat-messages div {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .myu-chat-form {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .myu-chat-form input {
+      flex: 1;
+      padding: 0.6rem 1rem;
+      border-radius: 1rem;
+      border: 1px solid #cbd5e1;
+      font-size: 1rem;
+    }
+    .myu-chat-error {
+      color: #dc2626;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+  </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="header" role="banner">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
-                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-                    <h1>DYL Volunteering Assistant</h1>
-                </div>
-                <div class="rp-branding">
-                    <span class="rp-text">Republic Polytechnic</span>
-                </div>
-            </div>
-            <nav class="nav" role="navigation" aria-label="Main navigation">
-                <div class="nav-menu">
-                    <a href="index.html" class="nav-link" aria-label="Home">
-                        <i class="fas fa-home" aria-hidden="true"></i>
-                        <span>Home</span>
-                    </a>
-                    <a href="elyiana.html" class="nav-link" aria-label="Activity Planner">
-                        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-                        <span>Activity Planner</span>
-                    </a>
-                    <a href="myu.html" class="nav-link active" aria-label="Education Coach">
-                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-                        <span>Education Coach</span>
-                    </a>
-                    <a href="alaster.html" class="nav-link" aria-label="Project Hub">
-                        <i class="fas fa-project-diagram" aria-hidden="true"></i>
-                        <span>Project Hub</span>
-                    </a>
-                    <a href="weiqiang.html" class="nav-link" aria-label="Reflection Coach">
-                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
-                        <span>Reflection & Portfolio Coach</span>
-                    </a>
-                    <a href="edlyana.html" class="nav-link" aria-label="Beneficiary Finder">
-                        <i class="fas fa-search" aria-hidden="true"></i>
-                        <span>Beneficiary Finder</span>
-                    </a>
-                </div>
-                <div class="nav-actions">
-                    <button class="nav-btn btn btn-primary" onclick="toggleChat()" aria-label="Open DYLCoach chat">
-                        <i class="fas fa-robot" aria-hidden="true"></i>
-                        <span>Start Coaching</span>
-                    </button>
-                    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
-                        <i class="fas fa-moon" aria-hidden="true"></i>
-                    </button>
-                </div>
-            </nav>
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo-section"><i class="fas fa-graduation-cap"></i><h1>DYL Volunteering Assistant</h1></div>
+        <div class="rp-branding"><span class="rp-text">Republic Polytechnic</span></div>
+      </div>
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link"><i class="fas fa-home"></i><span>Home</span></a>
+          <a href="elyiana.html" class="nav-link"><i class="fas fa-calendar-alt"></i><span>Activity Planner</span></a>
+          <a href="myu.html" class="nav-link active"><i class="fas fa-graduation-cap"></i><span>Education Coach</span></a>
+          <a href="alaster.html" class="nav-link"><i class="fas fa-project-diagram"></i><span>Project Hub</span></a>
+          <a href="weiqiang.html" class="nav-link"><i class="fas fa-lightbulb"></i><span>Reflection & Portfolio Coach</span></a>
+          <a href="edlyana.html" class="nav-link"><i class="fas fa-search"></i><span>Beneficiary Finder</span></a>
         </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="main" role="main">
-        <!-- Page Header -->
-        <section class="page-header">
-            <div class="container">
-                <div class="page-header-content">
-                    <div class="page-icon">
-                        <i class="fas fa-user-graduate" aria-hidden="true"></i>
-                    </div>
-                    <h2>Education Coach</h2>
-                    <p class="page-subtitle">Your personal guide for educational growth and skill development through volunteering</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Description Section -->
-        <section class="description-section">
-            <div class="container">
-                <div class="description-content">
-                    <h3>Meet Your Personal Education Coach 👩‍🏫</h3>
-                    <p>
-                        Hello! I'm Myu, your dedicated Education Coach. I'm passionate about helping you maximize 
-                        the learning potential of your DYLvolunteering experience. Together, we'll identify skills 
-                        you want to develop, find educational opportunities within your volunteer work, and create 
-                        a personalized learning plan that aligns with your academic and career aspirations.
-                    </p>
-                    
-                    <div class="features-grid">
-                        <div class="feature-card">
-                            <i class="fas fa-brain" aria-hidden="true"></i>
-                            <h4>Skill Development</h4>
-                            <p>Identify and develop key skills through your volunteering experiences</p>
-                        </div>
-                        <div class="feature-card">
-                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-                            <h4>Learning Pathways</h4>
-                            <p>Create personalized learning journeys that complement your studies</p>
-                        </div>
-                        <div class="feature-card">
-                            <i class="fas fa-chart-line" aria-hidden="true"></i>
-                            <h4>Progress Tracking</h4>
-                            <p>Monitor your educational growth and celebrate learning milestones</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Chatbot Section -->
-        <section class="chatbot-section">
-            <div class="container">
-                <div class="chatbot-wrapper">
-                    <div class="chatbot-header">
-                        <h3>Start Your Educational Journey</h3>
-                        <p>Chat with Myu to explore learning opportunities and create your personalized education plan!</p>
-                    </div>
-                    
-                    <!-- Placeholder for Flowise Chatbot -->
-                    <div class="chatbot-container">
-                        <div class="chatbot-placeholder">
-                            <div class="placeholder-content">
-                                <i class="fas fa-robot" aria-hidden="true"></i>
-                                <h4>Education Coach Chatbot</h4>
-                                <p>Flowise chatbot will be integrated here</p>
-                                <button class="btn btn-primary" onclick="alert('Chatbot integration coming soon!')">
-                                    <i class="fas fa-comments"></i>
-                                    Start Learning
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <!-- Replace this comment with your Flowise iframe/script -->
-                        <!-- <iframe src="YOUR_FLOWISE_URL" width="100%" height="500" frameborder="0"></iframe> -->
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Learning Areas Section -->
-        <section class="learning-areas-section">
-            <div class="container">
-                <div class="learning-content">
-                    <h3>🎯 Key Learning Areas</h3>
-                    <div class="learning-grid">
-                        <div class="learning-card">
-                            <i class="fas fa-comments" aria-hidden="true"></i>
-                            <h4>Communication Skills</h4>
-                            <p>Develop verbal, written, and interpersonal communication through volunteer interactions</p>
-                        </div>
-                        <div class="learning-card">
-                            <i class="fas fa-users-cog" aria-hidden="true"></i>
-                            <h4>Leadership & Teamwork</h4>
-                            <p>Build leadership capabilities and collaborative skills in real-world settings</p>
-                        </div>
-                        <div class="learning-card">
-                            <i class="fas fa-lightbulb" aria-hidden="true"></i>
-                            <h4>Problem Solving</h4>
-                            <p>Enhance critical thinking and creative problem-solving abilities</p>
-                        </div>
-                        <div class="learning-card">
-                            <i class="fas fa-heart" aria-hidden="true"></i>
-                            <h4>Emotional Intelligence</h4>
-                            <p>Develop empathy, social awareness, and emotional management skills</p>
-                        </div>
-                        <div class="learning-card">
-                            <i class="fas fa-cogs" aria-hidden="true"></i>
-                            <h4>Technical Skills</h4>
-                            <p>Learn new tools, technologies, and industry-specific competencies</p>
-                        </div>
-                        <div class="learning-card">
-                            <i class="fas fa-globe" aria-hidden="true"></i>
-                            <h4>Cultural Awareness</h4>
-                            <p>Gain insights into diverse communities and develop cultural sensitivity</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>DYL Volunteering Assistant</h3>
-                    <p>Empowering Republic Polytechnic students through meaningful volunteering experiences.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="elyiana.html">Activity Planner</a></li>
-                        <li><a href="myu.html">Education Coach</a></li>
-                        <li><a href="https://www.rp.edu.sg" target="_blank" rel="noopener noreferrer">RP Website</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Connect With Us</h3>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/republicpolytechnic" target="_blank" rel="noopener noreferrer" aria-label="Follow RP on Facebook">
-                            <i class="fab fa-facebook" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://www.instagram.com/republicpoly" target="_blank" rel="noopener noreferrer" aria-label="Follow RP on Instagram">
-                            <i class="fab fa-instagram" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/school/republic-polytechnic" target="_blank" rel="noopener noreferrer" aria-label="Follow RP on LinkedIn">
-                            <i class="fab fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Republic Polytechnic. All rights reserved. | Designed with ❤️ for RP students</p>
-            </div>
+        <div class="nav-actions">
+          <button class="nav-btn btn btn-primary" aria-label="Start Coaching">
+            <i class="fas fa-robot"></i><span>Start Coaching</span>
+          </button>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+          </button>
         </div>
-    </footer>
-
-    <!-- Floating Chat Widget -->
-    <div id="chat-widget" class="chat-widget">
-        <!-- Chat Toggle Button -->
-        <button id="chat-toggle" class="chat-toggle" aria-label="Open DYLCoach chat">
-            <i class="fas fa-comments" id="chat-icon"></i>
-            <i class="fas fa-times" id="close-icon" style="display: none;"></i>
-            <div class="chat-badge">💬</div>
-        </button>
-        
-        <!-- Chat Box -->
-        <div id="chat-box" class="chat-box">
-            <!-- Chat Header -->
-            <div class="chat-header">
-                <div class="chat-header-content">
-                    <div class="chat-avatar">
-                        <i class="fas fa-user-graduate"></i>
-                    </div>
-                    <div class="chat-header-text">
-                        <h4>Education Coach 👩‍🏫</h4>
-                        <span class="chat-status">Online • Ready to guide</span>
-                    </div>
-                </div>
-                <button id="chat-minimize" class="chat-minimize" aria-label="Minimize chat">
-                    <i class="fas fa-minus"></i>
-                </button>
-            </div>
-            
-            <!-- Chat Messages -->
-            <div id="chat-messages" class="chat-messages">
-                <div class="welcome-message">
-                    <div class="message bot-message">
-                        <div class="message-avatar">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="message-content">
-                            <p>Hi! I'm Myu, your Education Coach. I'm here to help you maximize your learning through volunteering. What skills would you like to develop? 📚✨</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Typing Indicator -->
-            <div id="typing-indicator" class="typing-indicator" style="display: none;">
-                <div class="message bot-message">
-                    <div class="message-avatar">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="message-content">
-                        <div class="typing-dots">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Chat Input -->
-            <div class="chat-input-container">
-                <form id="chat-form" class="chat-form">
-                    <div class="chat-input-wrapper">
-                        <textarea 
-                            id="chat-input" 
-                            class="chat-input" 
-                            placeholder="Ask about skill development..."
-                            rows="1"
-                            maxlength="1000"></textarea>
-                        <button type="submit" id="chat-send" class="chat-send" aria-label="Send message">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </div>
-                </form>
-                <div class="chat-footer">
-                    <small>Powered by Flowise • Education Coach</small>
-                </div>
-            </div>
-        </div>
+      </nav>
     </div>
+  </header>
 
-    <!-- Custom JavaScript -->
-    <script src="js/app.js"></script>
-    
-    <!-- Flowise Chatbot Integration -->
-    <script type="module">
-    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
-    Chatbot.init({
-        chatflowid: "7cab6fc9-44b7-4076-bbf3-d72a3a5a4864",
-        apiHost: "https://myuth-flowise.hf.space",
-    })
-</script>
+  <!-- Main -->
+  <main class="main" role="main">
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header-content">
+          <div class="page-icon"><i class="fas fa-user-graduate"></i></div>
+          <h2>Education Coach</h2>
+          <p class="page-subtitle">Your personal guide for educational growth and skill development through volunteering</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="description-section">
+      <div class="container">
+        <div class="description-content">
+          <h3>Meet Your Personal Education Coach 👩‍🏫</h3>
+          <p>Hello! I'm Myu, your dedicated Education Coach. I'm here to help you make the most of your DYLvolunteering experience through tailored learning plans.</p>
+          <div class="features-grid">
+            <div class="feature-card"><i class="fas fa-brain"></i><h4>Skill Development</h4><p>Identify and develop key skills through your volunteering experiences</p></div>
+            <div class="feature-card"><i class="fas fa-graduation-cap"></i><h4>Learning Pathways</h4><p>Create personalized learning journeys that complement your studies</p></div>
+            <div class="feature-card"><i class="fas fa-chart-line"></i><h4>Progress Tracking</h4><p>Monitor your educational growth and celebrate learning milestones</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chatbot Section -->
+    <section class="chatbot-section">
+      <div class="container">
+        <div class="chatbot-wrapper">
+          <div class="chatbot-header">
+            <h3>Start Your Educational Journey</h3>
+            <p>Chat with Myu to explore learning opportunities and create your personalized education plan!</p>
+          </div>
+          <div class="chatbot-container">
+            <div id="chatbox" class="myu-chatbox">
+              <div class="placeholder-content">
+                <i class="fas fa-robot"></i>
+                <h4>Education Coach Chatbot</h4>
+                <p>Ask anything about skill development, reflection, or planning!</p>
+              </div>
+              <div id="chat-messages" class="myu-chat-messages"></div>
+              <form id="chat-form" class="myu-chat-form">
+                <input id="chat-input" type="text" placeholder="Ask your question..." required />
+                <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send</button>
+              </form>
+              <div id="chat-error" class="myu-chat-error"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning Areas Section -->
+    <section class="learning-areas-section">
+      <div class="container">
+        <div class="learning-content">
+          <h3>🎯 Key Learning Areas</h3>
+          <div class="learning-grid">
+            <div class="learning-card"><i class="fas fa-comments"></i><h4>Communication Skills</h4><p>Improve your verbal, written, and interpersonal communication</p></div>
+            <div class="learning-card"><i class="fas fa-users-cog"></i><h4>Leadership & Teamwork</h4><p>Build leadership and collaboration skills</p></div>
+            <div class="learning-card"><i class="fas fa-lightbulb"></i><h4>Problem Solving</h4><p>Boost critical thinking and creativity</p></div>
+            <div class="learning-card"><i class="fas fa-heart"></i><h4>Emotional Intelligence</h4><p>Practice empathy, awareness, and self-management</p></div>
+            <div class="learning-card"><i class="fas fa-cogs"></i><h4>Technical Skills</h4><p>Learn tools, tech, and platforms relevant to your goals</p></div>
+            <div class="learning-card"><i class="fas fa-globe"></i><h4>Cultural Awareness</h4><p>Appreciate diversity and cross-cultural communication</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>DYL Volunteering Assistant</h3>
+          <p>Empowering Republic Polytechnic students through meaningful volunteering experiences.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="elyiana.html">Activity Planner</a></li>
+            <li><a href="myu.html">Education Coach</a></li>
+            <li><a href="https://www.rp.edu.sg" target="_blank">RP Website</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="https://www.facebook.com/republicpolytechnic" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/republicpoly" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/school/republic-polytechnic" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Republic Polytechnic. All rights reserved. | Designed with ❤️ for RP students</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    const chatHistory = [];
+
+    function renderMarkdown(text) {
+      if (window.marked) {
+        marked.setOptions({ gfm: true, breaks: true });
+        return marked.parse(text);
+      }
+      return text.replace(/\n/g, "<br>");
+    }
+
+    function appendMessage(role, content) {
+      const messages = document.getElementById("chat-messages");
+      const msgDiv = document.createElement("div");
+      msgDiv.innerHTML = `<strong>${role}:</strong><br>${renderMarkdown(content)}`;
+      messages.appendChild(msgDiv);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    async function query(history) {
+      try {
+        // Send only the latest user message to Flowise
+        const latestMessage = history[history.length - 1];
+        const response = await fetch("https://myuth-flowise.hf.space/api/v1/prediction/7cab6fc9-44b7-4076-bbf3-d72a3a5a4864", {
+          method: "POST",
+          headers: { 
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify({ 
+            question: latestMessage.content,
+            history: history.slice(0, -1).map(m => `${m.role}: ${m.content}`).join("\n")
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log('Flowise Response:', data); // Debug log
+        return data;
+      } catch (error) {
+        console.error('Flowise API Error:', error);
+        throw error;
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("chat-form");
+      const input = document.getElementById("chat-input");
+      const errorDiv = document.getElementById("chat-error");
+
+      // Test Flowise connection on page load
+      async function testFlowiseConnection() {
+        try {
+          console.log('Testing Flowise connection...');
+          const response = await fetch("https://myuth-flowise.hf.space/api/v1/prediction/7cab6fc9-44b7-4076-bbf3-d72a3a5a4864", {
+            method: "POST",
+            headers: { 
+              "Content-Type": "application/json",
+              "Accept": "application/json"
+            },
+            body: JSON.stringify({ 
+              question: "Hello, are you working?",
+              history: ""
+            })
+          });
+          
+          if (response.ok) {
+            console.log('✅ Flowise connection successful');
+            appendMessage("Myu", "Hello! I'm Myu, your Education Coach. I'm ready to help you with your learning journey. What would you like to know about skill development or volunteering?");
+          } else {
+            console.warn('⚠️ Flowise connection issue:', response.status);
+          }
+        } catch (error) {
+          console.error('❌ Flowise connection failed:', error);
+          errorDiv.textContent = "Connection issue detected. The chatbot may not respond properly.";
+        }
+      }
+
+      // Test connection
+      testFlowiseConnection();
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const userMsg = input.value.trim();
+        if (!userMsg) return;
+
+        chatHistory.push({ role: "You", content: userMsg });
+        appendMessage("You", userMsg);
+        input.value = "";
+        errorDiv.textContent = "";
+
+        // Show typing indicator
+        appendMessage("Myu", "*typing...*");
+
+        try {
+          console.log('Sending message to Flowise:', userMsg); // Debug log
+          const res = await query(chatHistory);
+          
+          // Handle different possible response formats from Flowise
+          let botReply;
+          if (res.text) {
+            botReply = res.text;
+          } else if (res.answer) {
+            botReply = res.answer;
+          } else if (res.response) {
+            botReply = res.response;
+          } else if (typeof res === 'string') {
+            botReply = res;
+          } else {
+            console.log('Unexpected response format:', res);
+            botReply = "I received your message but couldn't process the response properly. Please try again.";
+          }
+
+          chatHistory.push({ role: "Myu", content: botReply });
+
+          // Remove typing indicator and show response
+          const messages = document.getElementById("chat-messages");
+          messages.lastChild.remove(); // remove typing
+          appendMessage("Myu", botReply);
+          
+        } catch (err) {
+          console.error('Chat error:', err);
+          const messages = document.getElementById("chat-messages");
+          messages.lastChild.remove(); // remove typing
+          
+          let errorMessage = "I'm having trouble connecting right now. ";
+          if (err.message.includes('404')) {
+            errorMessage += "The chatbot service seems to be unavailable.";
+          } else if (err.message.includes('500')) {
+            errorMessage += "There's a server issue. Please try again in a moment.";
+          } else if (err.message.includes('NetworkError') || err.message.includes('Failed to fetch')) {
+            errorMessage += "Please check your internet connection.";
+          } else {
+            errorMessage += "Please try again.";
+          }
+          
+          errorDiv.textContent = errorMessage;
+          appendMessage("Myu", "Sorry, I'm experiencing technical difficulties. Please try asking your question again.");
+        }
+      });
+    });
+  </script>
 </body>
 </html>
